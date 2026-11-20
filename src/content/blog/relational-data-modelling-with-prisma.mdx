@@ -1,0 +1,77 @@
+---
+title: "Relational Data Modelling With Prisma"
+description: "Moving from a vague feature idea to tables, relations and constraints that are easier to query and maintain."
+date: "2026-09-12"
+category: "Databases"
+tags: ["PostgreSQL", "Prisma", "Databases"]
+sample: true
+---
+
+A data model is a set of decisions about what the application remembers. Prisma makes those decisions tangible in a schema, but the schema is only useful if the relationships make sense first.
+
+This sample article focuses on modelling basics. It is not tied to a specific production database.
+
+## Start with nouns and questions
+
+Before writing a model, list the nouns in the feature and the questions the interface must answer. For a simple publishing app, those might be `User`, `Post` and `Tag`.
+
+Questions might include:
+
+- Who wrote a post?
+- Can a post have several tags?
+- Can a tag be reused across posts?
+- Should deleting an author delete their posts?
+
+Those questions determine relationships and delete behaviour, not just field names.
+
+## A small schema
+
+```prisma
+model User {
+  id    String @id @default(cuid())
+  email String @unique
+  name  String
+  posts Post[]
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  published Boolean  @default(false)
+  authorId  String
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  tags      Tag[]
+  createdAt DateTime @default(now())
+}
+
+model Tag {
+  id    String @id @default(cuid())
+  name  String @unique
+  posts Post[]
+}
+```
+
+`Post` and `Tag` form an implicit many-to-many relationship. A post has one author, while a user can have many posts. The `@unique` constraints protect invariants that the application depends on.
+
+## Think about access patterns
+
+A schema should support the queries the application actually makes. If the home page lists published posts by date, an index on `published` and `createdAt` may be useful. If every request looks up a post by slug, `slug` needs an index — and uniqueness prevents duplicate routes.
+
+Prisma's schema is not a performance strategy by itself. Read the generated SQL for important queries, measure with realistic data, and add indexes with intent.
+
+> Model correctness first, then measure. Premature denormalisation tends to convert a clear data problem into a harder consistency problem.
+
+## Relations have delete semantics
+
+`onDelete: Cascade` means deleting a user deletes their posts. That might be correct for a personal note app and completely wrong for financial records. Decide deliberately, and test the behaviour. In many systems, soft deletion or archival is a better fit than a hard delete.
+
+## A review checklist
+
+- Does each table represent one clear concept?
+- Are required relationships enforced by the database?
+- Are uniqueness rules expressed as constraints?
+- Do common list and detail queries have a reasonable path?
+- Is deletion behaviour intentional?
+
+A good relational model is not the most elaborate one. It is the one that makes the important questions easy to ask and the invalid states hard to record.

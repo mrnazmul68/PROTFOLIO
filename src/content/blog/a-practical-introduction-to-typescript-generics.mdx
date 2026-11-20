@@ -1,0 +1,82 @@
+---
+title: "A Practical Introduction to TypeScript Generics"
+description: "Generics are not decoration. They are a way to describe relationships between values, inputs and outputs."
+date: "2026-10-22"
+category: "TypeScript"
+tags: ["TypeScript", "Generics", "Fundamentals"]
+sample: true
+---
+
+The first time you see `<T>` in TypeScript, it can look like ceremonial syntax. The useful question is simpler: what relationship is this type trying to preserve?
+
+This is a sample article covering a foundational idea. The examples are intentionally small enough to keep the whole type flow in view.
+
+## The problem generics solve
+
+Imagine a function that returns the first item of an array. Without generics, you might type it like this:
+
+```ts
+function first(items: unknown[]): unknown {
+  return items[0];
+}
+```
+
+That is technically safe, but it throws information away. If the caller passes an array of strings, the result should still be a string. A generic describes that dependency:
+
+```ts
+function first<T>(items: T[]): T | undefined {
+  return items[0];
+}
+
+const value = first(["a", "b"]);
+// value: string | undefined
+```
+
+`T` is a type parameter. It is filled in by the caller, not by the function body. The function promises, "whatever element type you give me is the element type I return."
+
+## Constraints make a generic useful
+
+A type parameter can be constrained when the implementation needs a particular shape.
+
+```ts
+type HasId = { id: string };
+
+function indexById<T extends HasId>(items: T[]): Record<string, T> {
+  return Object.fromEntries(items.map((item) => [item.id, item]));
+}
+```
+
+The constraint keeps the body honest: inside the function, `item.id` is known to exist. The caller still gets to keep its specific type, including extra fields.
+
+## Generics in React components
+
+A reusable list component is a good practical example:
+
+```tsx
+type ListProps<T> = {
+  items: T[];
+  renderItem: (item: T) => React.ReactNode;
+};
+
+function List<T>({ items, renderItem }: ListProps<T>) {
+  return <ul>{items.map((item, index) => (
+    <li key={index}>{renderItem(item)}</li>
+  ))}</ul>;
+}
+```
+
+When the component is used, TypeScript infers `T` from `items`, which means `renderItem` gets the correct item shape. No casts, no duplicated prop types.
+
+> If a generic only appears once in a signature, it may not be doing useful work. Generics are most valuable when they connect two or more positions.
+
+## Three habits worth building
+
+- Start concrete. Write the runtime code first, then ask which relationship should be preserved.
+- Prefer inference. Let TypeScript infer `T` instead of sprinkling explicit type arguments everywhere.
+- Avoid over-generalising. A clear, specific type is often better than a flexible abstraction nobody can read.
+
+## Where to go next
+
+Once the basics feel natural, explore generic constraints, conditional types and utility types such as `Pick`, `Omit` and `ReturnType`. Read them as tools for describing existing JavaScript behaviour, not as a separate language to memorise.
+
+Generics become approachable when you stop asking "where do I put the angle brackets?" and start asking "what must stay true between these values?"

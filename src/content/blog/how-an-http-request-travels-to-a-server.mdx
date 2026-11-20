@@ -1,0 +1,62 @@
+---
+title: "How an HTTP Request Travels From Browser to Server"
+description: "A tour of the layers between typing a URL and seeing a response, with the terminology that makes backend work less opaque."
+date: "2026-09-30"
+category: "Backend"
+tags: ["HTTP", "Backend", "Web"]
+sample: true
+---
+
+When a browser loads a page, a surprising amount of work happens before the first pixel appears. Understanding the path of an HTTP request makes debugging faster and architecture decisions less abstract.
+
+This is a demo article about the web platform, not a description of a specific production system.
+
+## From URL to address
+
+A URL such as `https://example.com/projects` contains more than a string. The protocol is `https`, the host is `example.com`, and the path is `/projects`.
+
+The browser first needs an IP address for that host. It checks its own cache, then the operating system and DNS resolver. DNS translates a human-readable hostname into an address a network can route to.
+
+## Opening a connection
+
+For HTTPS, the browser establishes a secure connection using TLS. During the handshake, both sides agree on encryption parameters and verify the server's certificate. After that, application data can travel over an encrypted channel.
+
+HTTP/1.1 keeps a connection open for reuse when possible. HTTP/2 and HTTP/3 add multiplexing and other transport improvements, but the conceptual shape of a request and response remains familiar.
+
+## The request itself
+
+A request includes a method, path, headers and sometimes a body:
+
+```http
+GET /projects HTTP/1.1
+Host: example.com
+Accept: text/html
+```
+
+Methods describe intent. `GET` asks for a representation, `POST` submits data, `PATCH` modifies part of a resource, and `DELETE` removes one. Headers carry metadata: authentication, accepted content types, caching information and more.
+
+## What the server does
+
+The request reaches a server, often through a proxy or CDN. The application framework routes the path, runs middleware, checks authentication and eventually produces a response. A backend might query a database, call another service, or return a cached result.
+
+The response includes a status code and headers:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Cache-Control: public, max-age=60
+```
+
+Status codes are grouped by meaning: `2xx` success, `3xx` redirection, `4xx` client-side problems, `5xx` server-side failures. Precise status codes make an API easier to consume and debug.
+
+## Rendering and the next request
+
+The browser parses HTML, discovers CSS, JavaScript, images and fonts, and issues further requests. Caching can avoid repeated network work. JavaScript may then fetch additional data and update the interface.
+
+> The whole system is a chain of observable contracts: DNS resolution, TLS, request parsing, routing, data access and response formatting. When one link fails, the network panel is often the fastest way to find it.
+
+## Why backend developers should care
+
+Even a frontend-heavy application depends on this path. Latency, cache headers, authentication failures and CORS errors all live here. Knowing what happens between the click and the handler makes the error messages far less intimidating.
+
+The next time a request fails, walk the chain: DNS, connection, TLS, request formatting, server routing, application logic, data layer, response and cache. There are only a few places for the problem to hide.

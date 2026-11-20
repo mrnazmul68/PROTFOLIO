@@ -1,0 +1,57 @@
+---
+title: "System Design: A Starting Map"
+description: "The questions behind scalable systems — boundaries, data flow, failure and trade-offs — without pretending there is one correct answer."
+date: "2026-08-18"
+category: "Computer Science"
+tags: ["System Design", "Architecture", "Learning"]
+sample: true
+---
+
+System design can feel like a vocabulary test: caches, queues, replicas, sharding. The vocabulary matters, but the discipline underneath it is simpler. It is the practice of making trade-offs explicit.
+
+This is a demonstration article that maps out the subject. It does not describe professional experience or claim any particular production scale.
+
+## Begin with requirements, not components
+
+A useful design conversation starts with constraints:
+
+- Who uses the system and what are they trying to do?
+- Which operations must be fast?
+- How much data is involved, and how quickly does it grow?
+- What happens if a component is temporarily unavailable?
+- Is consistency more important than availability for this feature?
+
+Drawing boxes is easy. Knowing which boxes are justified is the work.
+
+## Separate the core path from supporting machinery
+
+Most systems have a small number of essential flows. For a URL shortener, it is: accept a URL, return a short code, and resolve that code on redirect. A first design can be one service and one database.
+
+Only after the core path is clear should you ask whether caching, asynchronous processing or partitioning genuinely help. Adding infrastructure without a measured bottleneck often adds failure modes instead of capacity.
+
+## Trade-offs worth naming
+
+**Consistency versus availability.** If two users update the same record at once, who wins? Strong consistency can require coordination; eventual consistency can return stale data temporarily. The right answer depends on the feature.
+
+**Latency versus cost.** Caching and replication can make reads faster, but they bring invalidation work and additional copies of data. The cheapest cache is often a query that is already fast enough.
+
+**Synchronous versus asynchronous.** A request that must finish before the user continues should usually stay synchronous. Welcome emails and analytics events can often be queued.
+
+**Monolith versus services.** A modular monolith is a legitimate architecture. Service boundaries are easiest to get right when the domain and team boundaries are already understood.
+
+## A practical design loop
+
+1. Clarify the user-facing requirements.
+2. Estimate rough scale and read/write patterns.
+3. Sketch the smallest system that could work.
+4. Identify likely bottlenecks and failure points.
+5. Add one mechanism at a time, with a reason.
+6. Describe what happens when each part fails.
+
+> Strong system design is not the ability to list more components. It is the ability to explain why fewer components are enough — and where the first real limit will appear.
+
+## What to learn first
+
+Build a small API. Add a database. Watch a slow query. Add an index. Put a cache in front of a hot read. Introduce a queue for work that does not need to block a response. Deploy it and observe it. Each mechanism becomes meaningful when it solves a problem you can see.
+
+The map is large, but the first route is approachable: understand the request path, respect the data model, and make trade-offs explicit.

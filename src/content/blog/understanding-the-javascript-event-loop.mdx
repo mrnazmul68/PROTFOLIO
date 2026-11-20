@@ -1,0 +1,59 @@
+---
+title: "The JavaScript Event Loop, Explained Simply"
+description: "A clear mental model for call stacks, tasks, microtasks and why asynchronous JavaScript sometimes surprises us."
+date: "2026-11-10"
+category: "JavaScript"
+tags: ["JavaScript", "Async", "Fundamentals"]
+sample: true
+---
+
+JavaScript runs on a single main thread. It can only execute one piece of code at a time, yet a browser can respond to clicks while a network request is still pending. The event loop is the mechanism that makes that feel effortless.
+
+This is a demonstration article about language fundamentals — a way to think through the ideas, not a claim that studying them was a personal milestone.
+
+## The two places code waits
+
+Start with the call stack. It is where JavaScript keeps track of the function currently running, and the functions that called it. When a function returns, its frame is removed. If the stack is empty, the engine can look for more work.
+
+That work comes from queues:
+
+- The **task queue** holds callbacks such as timers, DOM events and I/O completion.
+- The **microtask queue** holds promise reactions and queueMicrotask callbacks.
+
+The event loop repeatedly checks whether the stack is empty. When it is, it drains the entire microtask queue, renders if needed, and then picks up the next task.
+
+> A useful shorthand: synchronous code finishes first, then all pending microtasks run, then the browser gets a chance to paint before the next task.
+
+## A small example
+
+```js
+console.log("A");
+
+setTimeout(() => console.log("B"), 0);
+
+Promise.resolve().then(() => console.log("C"));
+
+console.log("D");
+```
+
+The output is `A, D, C, B`.
+
+The synchronous logs run immediately. The promise callback is a microtask, so it runs before the timer callback, even though the timer was registered first and its delay is zero. A zero-millisecond timer does not mean "run right now"; it means "enqueue a task for the next opportunity."
+
+## Why this matters in real interfaces
+
+Long synchronous work blocks the stack. While it runs, microtasks cannot drain, the browser cannot paint, and interactions feel frozen. Splitting large work into smaller chunks — or moving it to a Web Worker — keeps the main thread responsive.
+
+This is also why `await` matters. Code after an `await` resumes as a microtask. If you update state and immediately measure layout, the DOM may not yet reflect the update. Understanding the scheduling order makes those bugs much less mysterious.
+
+## A practical checklist
+
+1. Treat synchronous work as the highest-priority lane.
+2. Remember that promises do not mean "parallel"; they mean "scheduled."
+3. Keep expensive computation off the main thread.
+4. Use `setTimeout` for deferral, not for precision.
+5. When order confuses you, draw the queues instead of guessing.
+
+## The mental model to keep
+
+The event loop is not an advanced feature you learn once and leave behind. It is the reason JavaScript behaves the way it does under load. Once the call stack, task queue and microtask queue become familiar, asynchronous code stops feeling like an exception to the language and starts feeling like its natural rhythm.
