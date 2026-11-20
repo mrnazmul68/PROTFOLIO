@@ -29,7 +29,10 @@ export const siteConfig = {
   department: "Computer Science and Engineering",
   semester: "1st Semester",
   location: "Bangladesh",
-  profileImage: "/images/profile/nazmul-portrait.webp",
+  // Version query busts the old Next.js image-optimizer/browser cache.
+  profileImage: "/images/profile/nazmul-portrait.webp?v=2",
+  profileImageDark:
+    "/images/profile/Red-Black-Gradient-nazmul-portrait.webp",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   socials: {
     github: "https://github.com/mrnazmul68",

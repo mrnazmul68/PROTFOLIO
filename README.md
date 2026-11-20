@@ -79,10 +79,11 @@ Posts are discovered automatically. Set `sample: false` only when an article is 
 
 ### Images
 
-- Portrait: `public/images/profile/nazmul-portrait.webp` — a transparent cut-out of the supplied photograph, rendered with a CSS grayscale treatment. Replace this file to update the portrait everywhere; keep a similar portrait aspect ratio (roughly 4:5) for the best crop.
+- Light-theme portrait: `public/images/profile/nazmul-portrait.webp` — rendered with a grayscale treatment.
+- Dark-theme portrait: `public/images/profile/Red-Black-Gradient-nazmul-portrait.webp` — rendered in colour to preserve the red/black treatment.
 - Open Graph image: `public/images/og/og-image.jpg` — 1200 × 630. Replace it when the identity or branding changes.
 
-`siteConfig.profileImage` controls the portrait path used by the app.
+`siteConfig.profileImage` and `siteConfig.profileImageDark` control the two portraits. Both are 1024 × 1536 (2:3); keep a similar portrait aspect ratio for the best crop. If you replace a portrait but keep the same filename, increase the `?v=` suffix in `src/config/site.ts` so the Next.js image optimizer and browser fetch the new file.
 
 ## Contact form
 

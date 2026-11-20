@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    // Allow the cache-busting query on local portrait assets.
+    localPatterns: [{ pathname: "/images/**" }],
   },
 };
 

@@ -475,6 +475,26 @@ html.light .grain {
   filter: grayscale(1) contrast(1.06) brightness(0.94);
 }
 
+.portrait-treatment-color {
+  filter: contrast(1.05) saturate(0.96);
+}
+
+.portrait-image-light {
+  display: none;
+}
+
+.portrait-image-dark {
+  display: block;
+}
+
+html.light .portrait-image-light {
+  display: block;
+}
+
+html.light .portrait-image-dark {
+  display: none;
+}
+
 /* ---------- Buttons ---------- */
 
 .btn-shine {

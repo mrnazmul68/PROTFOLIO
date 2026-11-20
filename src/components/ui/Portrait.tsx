@@ -45,7 +45,19 @@ export function Portrait({
               ? "(min-width: 1280px) 480px, (min-width: 1024px) 38vw, (min-width: 640px) 70vw, 90vw"
               : "(min-width: 1024px) 40vw, 90vw"
           }
-          className="portrait-treatment object-contain object-bottom drop-shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
+          className="portrait-image-light portrait-treatment object-contain object-bottom drop-shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
+        />
+        <Image
+          src={siteConfig.profileImageDark}
+          alt={`Portrait of ${siteConfig.name}, ${siteConfig.title}`}
+          fill
+          priority={priority}
+          sizes={
+            variant === "hero"
+              ? "(min-width: 1280px) 480px, (min-width: 1024px) 38vw, (min-width: 640px) 70vw, 90vw"
+              : "(min-width: 1024px) 40vw, 90vw"
+          }
+          className="portrait-image-dark portrait-treatment-color object-contain object-bottom drop-shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
         />
       </div>
 
