@@ -13,7 +13,7 @@ export function Projects() {
   const liveCount = projects.filter((project) => project.liveUrl).length;
 
   return (
-    <section id="projects" className="anchor-offset section-pad relative overflow-hidden border-t border-white/10">
+    <section id="projects" className="anchor-offset section-pad relative overflow-hidden border-t border-ink/10">
       <div
         aria-hidden="true"
         className="absolute right-[-20%] top-1/4 size-[44rem] rounded-full bg-[radial-gradient(circle,rgba(255,48,48,0.06),transparent_68%)] blur-3xl"
@@ -55,15 +55,15 @@ export function Projects() {
         </div>
 
         <Reveal delay={0.08} className="mt-16">
-          <div className="flex flex-col gap-5 border-y border-white/10 py-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-5 border-y border-ink/10 py-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-wrap items-center gap-x-7 gap-y-2 font-mono text-[8px] uppercase tracking-[0.18em] text-subtle">
               <span>{String(projects.length).padStart(2, "0")} projects in the archive</span>
               <span>{String(liveCount).padStart(2, "0")} live deployments</span>
-              <span className="hidden text-white/25 sm:inline">Updated as work ships</span>
+              <span className="hidden text-ink/25 sm:inline">Updated as work ships</span>
             </div>
             <Link
               href="/projects"
-              className="group inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-white/75 transition-colors hover:text-accent"
+              className="group inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-ink/75 transition-colors hover:text-accent"
             >
               Explore every build
               <ArrowUpRight

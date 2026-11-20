@@ -32,7 +32,7 @@ export function WhatsAppButton() {
       </svg>
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-full border border-white/10 bg-[#111111]/95 px-3.5 py-2 text-[10px] font-medium text-white/80 opacity-0 shadow-xl backdrop-blur transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:opacity-100 sm:-translate-x-1 sm:block"
+        className="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-full border border-ink/10 bg-elevated/95 px-3.5 py-2 text-[10px] font-medium text-ink/80 opacity-0 shadow-xl backdrop-blur transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:opacity-100 sm:-translate-x-1 sm:block"
       >
         Let&apos;s Chat on WhatsApp
       </span>

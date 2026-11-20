@@ -90,14 +90,14 @@ export function AnimatedStats() {
   );
 
   return (
-    <div ref={root} className="mt-16 border-y border-white/10 sm:mt-20">
-      <dl className="grid grid-cols-2 divide-x divide-white/10 lg:grid-cols-4">
+    <div ref={root} className="mt-16 border-y border-ink/10 sm:mt-20">
+      <dl className="grid grid-cols-2 divide-x divide-ink/10 lg:grid-cols-4">
         {stats.map((stat, index) => (
           <div
             key={stat.label}
             className={
               index > 1
-                ? "border-t border-white/10 px-5 py-7 sm:px-7 lg:border-t-0"
+                ? "border-t border-ink/10 px-5 py-7 sm:px-7 lg:border-t-0"
                 : "px-5 py-7 sm:px-7"
             }
           >
@@ -106,7 +106,7 @@ export function AnimatedStats() {
               {stat.suffix ?? ""} {stat.label}
             </dt>
             <dd aria-hidden="true">
-              <p className="flex items-baseline font-medium leading-none tracking-[-0.06em] text-white">
+              <p className="flex items-baseline font-medium leading-none tracking-[-0.06em] text-ink">
                 <span
                   data-stat-number
                   className="text-[clamp(2.5rem,4.5vw,4rem)] tabular-nums"
@@ -119,7 +119,7 @@ export function AnimatedStats() {
                   </span>
                 ) : null}
               </p>
-              <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.2em] text-white/60">
+              <p className="mt-3 font-mono text-[9px] uppercase tracking-[0.2em] text-ink/60">
                 {stat.label}
               </p>
               <p className="mt-1.5 text-[11px] leading-5 text-subtle">{stat.note}</p>

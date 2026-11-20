@@ -66,8 +66,8 @@ export function TableOfContents({ items, className }: TableOfContentsProps) {
                   "block border-l py-1.5 text-[11px] leading-5 transition-all duration-200",
                   item.level === 3 ? "pl-6" : "pl-4",
                   active
-                    ? "border-accent text-white"
-                    : "border-white/10 text-subtle hover:border-white/25 hover:text-white/70",
+                    ? "border-accent text-ink"
+                    : "border-ink/10 text-subtle hover:border-ink/25 hover:text-ink/70",
                 )}
               >
                 {item.title}

@@ -63,7 +63,7 @@ export function Journey() {
     <section
       ref={root}
       id="journey"
-      className="anchor-offset section-pad relative overflow-hidden border-t border-white/10 bg-[#090909]"
+      className="anchor-offset section-pad relative overflow-hidden border-t border-ink/10 bg-surface"
     >
       <div
         aria-hidden="true"
@@ -96,7 +96,7 @@ export function Journey() {
                   <span className="h-px w-8 bg-accent" aria-hidden="true" />
                   The path so far
                 </div>
-                <p className="mt-6 text-balance font-serif text-[clamp(2rem,3.4vw,3rem)] italic leading-[1.08] tracking-[-0.02em] text-white/90">
+                <p className="mt-6 text-balance font-serif text-[clamp(2rem,3.4vw,3rem)] italic leading-[1.08] tracking-[-0.02em] text-ink/90">
                   Still at the
                   <br />
                   beginning
@@ -110,7 +110,7 @@ export function Journey() {
               </Reveal>
 
               <Reveal delay={0.12} className="mt-9">
-                <div className="relative overflow-hidden border border-white/10 bg-white/[0.02] p-5">
+                <div className="relative overflow-hidden border border-ink/10 bg-ink/[0.02] p-5">
                   <div
                     aria-hidden="true"
                     className="absolute -right-10 -top-10 size-32 rounded-full bg-accent/10 blur-2xl"
@@ -123,12 +123,12 @@ export function Journey() {
                       <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-subtle">
                         Currently
                       </p>
-                      <p className="mt-1 text-sm leading-5 text-white/85">
+                      <p className="mt-1 text-sm leading-5 text-ink/85">
                         {siteConfig.semester} · {siteConfig.department}
                       </p>
                     </div>
                   </div>
-                  <p className="mt-4 border-t border-white/[0.08] pt-3 text-[11px] leading-5 text-subtle">
+                  <p className="mt-4 border-t border-ink/[0.08] pt-3 text-[11px] leading-5 text-subtle">
                     {siteConfig.university}
                   </p>
                 </div>
@@ -136,19 +136,19 @@ export function Journey() {
 
               <Reveal delay={0.16} className="mt-7 hidden lg:block">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-[8px] tracking-[0.16em] text-white/30">
+                  <span className="font-mono text-[8px] tracking-[0.16em] text-ink/30">
                     01
                   </span>
-                  <div className="relative h-24 w-px bg-white/10">
+                  <div className="relative h-24 w-px bg-ink/10">
                     <span
                       data-journey-line
                       className="absolute inset-0 origin-top bg-gradient-to-b from-accent to-accent/10"
                     />
                   </div>
-                  <span className="font-mono text-[8px] tracking-[0.16em] text-white/30">
+                  <span className="font-mono text-[8px] tracking-[0.16em] text-ink/30">
                     06
                   </span>
-                  <span className="ml-2 font-mono text-[8px] uppercase tracking-[0.18em] text-white/25">
+                  <span className="ml-2 font-mono text-[8px] uppercase tracking-[0.18em] text-ink/25">
                     Scroll to follow
                   </span>
                 </div>
@@ -159,7 +159,7 @@ export function Journey() {
           <div className="lg:col-span-7 lg:col-start-6">
             <ol
               data-journey-list
-              className="relative ml-[5px] border-l border-white/10"
+              className="relative ml-[5px] border-l border-ink/10"
             >
               <span
                 data-journey-line
@@ -181,7 +181,7 @@ export function Journey() {
                       "absolute -left-[5px] top-2 size-[9px] rounded-full border transition-all duration-300",
                       item.current
                         ? "border-accent bg-accent shadow-[0_0_18px_rgba(255,48,48,0.75)]"
-                        : "border-white/25 bg-[#090909] group-hover:border-accent group-hover:bg-accent",
+                        : "border-ink/25 bg-surface group-hover:border-accent group-hover:bg-accent",
                     )}
                   />
 
@@ -200,7 +200,7 @@ export function Journey() {
                     ) : null}
                   </div>
 
-                  <h3 className="mt-2.5 max-w-lg text-balance text-[clamp(1.3rem,2.2vw,1.8rem)] font-medium leading-[1.18] tracking-[-0.035em] text-white/85 transition-colors duration-300 group-hover:text-white">
+                  <h3 className="mt-2.5 max-w-lg text-balance text-[clamp(1.3rem,2.2vw,1.8rem)] font-medium leading-[1.18] tracking-[-0.035em] text-ink/85 transition-colors duration-300 group-hover:text-ink">
                     {item.title}
                   </h3>
                   <p className="mt-2 max-w-xl text-pretty text-[13px] leading-6 text-muted">
@@ -211,15 +211,15 @@ export function Journey() {
             </ol>
 
             <Reveal delay={0.1} className="mt-10">
-              <div className="flex items-center justify-between gap-5 border-t border-white/10 pt-5">
-                <p className="font-serif text-sm italic text-white/35">
+              <div className="flex items-center justify-between gap-5 border-t border-ink/10 pt-5">
+                <p className="font-serif text-sm italic text-ink/35">
                   The next chapter is being built.
                 </p>
                 <a
                   href={siteConfig.socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-accent"
+                  className="group inline-flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.18em] text-ink/45 transition-colors hover:text-accent"
                 >
                   Follow along
                   <ArrowUpRight

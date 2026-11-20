@@ -9,7 +9,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/10">
+    <footer className="relative overflow-hidden border-t border-ink/10">
       <div
         aria-hidden="true"
         className="absolute -top-24 left-1/4 h-64 w-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,48,48,0.09),transparent_68%)] blur-3xl"
@@ -30,7 +30,7 @@ export function Footer() {
             </p>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="group mt-8 inline-flex items-center gap-3 border-b border-white/20 pb-2 text-sm text-white transition-colors hover:border-accent hover:text-accent sm:text-base"
+              className="group mt-8 inline-flex items-center gap-3 border-b border-ink/20 pb-2 text-sm text-ink transition-colors hover:border-accent hover:text-accent sm:text-base"
             >
               {siteConfig.email}
               <ArrowUpRight
@@ -50,7 +50,7 @@ export function Footer() {
                   <li key={item.section}>
                     <Link
                       href={item.href}
-                      className="group inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-white"
+                      className="group inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-ink"
                     >
                       {item.label}
                       <ArrowUpRight
@@ -69,12 +69,12 @@ export function Footer() {
               Elsewhere
             </p>
             <SocialLinks variant="list" className="mt-5 grid-cols-2 gap-y-3 lg:grid-cols-1" />
-            <div className="mt-8 border-t border-white/10 pt-5">
+            <div className="mt-8 border-t border-ink/10 pt-5">
               <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-subtle">
                 Based in
               </p>
-              <p className="mt-2 text-sm text-white/75">{siteConfig.location}</p>
-              <div className="mt-3 flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.16em] text-white/40">
+              <p className="mt-2 text-sm text-ink/75">{siteConfig.location}</p>
+              <div className="mt-3 flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.16em] text-ink/40">
                 <span className="size-1.5 animate-blink rounded-full bg-accent" aria-hidden="true" />
                 {siteConfig.availability}
               </div>
@@ -82,16 +82,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-5 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-5 border-t border-ink/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[11px] text-subtle">
             © {year} {siteConfig.name}. All rights reserved.
           </p>
-          <p className="font-serif text-sm italic text-white/45">{siteConfig.copyright}</p>
+          <p className="font-serif text-sm italic text-ink/45">{siteConfig.copyright}</p>
           <BackToTop />
         </div>
 
         <div aria-hidden="true" className="mt-12 select-none overflow-hidden">
-          <p className="-mb-[0.12em] whitespace-nowrap text-center text-[clamp(4.5rem,16vw,15rem)] font-semibold leading-[0.75] tracking-[-0.085em] text-white/[0.045]">
+          <p className="-mb-[0.12em] whitespace-nowrap text-center text-[clamp(4.5rem,16vw,15rem)] font-semibold leading-[0.75] tracking-[-0.085em] text-ink/[0.045]">
             {siteConfig.logo}
             <span className="text-accent/25">.</span>
           </p>

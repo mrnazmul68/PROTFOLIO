@@ -15,7 +15,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
     <article className="group flex h-full flex-col">
       <Link
         href={`/blog/${post.slug}`}
-        className="block overflow-hidden border border-white/10 transition-colors duration-500 group-hover:border-accent/30"
+        className="block overflow-hidden border border-ink/10 transition-colors duration-500 group-hover:border-accent/30"
         aria-label={`Read ${post.title}`}
       >
         <div className="transition-transform duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.025]">
@@ -50,7 +50,7 @@ export function BlogCard({ post, index }: BlogCardProps) {
 
       <Link
         href={`/blog/${post.slug}`}
-        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-4 text-[10px] font-medium uppercase tracking-[0.16em] text-white/70 transition-colors hover:text-accent"
+        className="mt-auto inline-flex w-fit items-center gap-1.5 pt-4 text-[10px] font-medium uppercase tracking-[0.16em] text-ink/70 transition-colors hover:text-accent"
         tabIndex={-1}
         aria-hidden="true"
       >

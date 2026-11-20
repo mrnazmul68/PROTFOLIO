@@ -9,6 +9,7 @@ import { ArrowUpRight, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { buttonStyles } from "@/components/ui/Button";
 import { SocialLinks } from "@/components/ui/SocialLinks";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 interface MobileMenuProps {
   open: boolean;
@@ -94,7 +95,7 @@ export function MobileMenu({ open, activeSection, onClose }: MobileMenuProps) {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
-          className="fixed inset-0 z-[90] flex flex-col overflow-y-auto bg-[#080808]"
+          className="fixed inset-0 z-[90] flex flex-col overflow-y-auto bg-background"
           initial={{
             opacity: 0,
             clipPath: reduceMotion ? "inset(0 0 0 0)" : "inset(0 0 100% 0)",
@@ -113,29 +114,32 @@ export function MobileMenu({ open, activeSection, onClose }: MobileMenuProps) {
           />
           <div
             aria-hidden="true"
-            className="absolute -bottom-20 left-0 select-none font-serif text-[16rem] italic leading-none text-white/[0.025]"
+            className="absolute -bottom-20 left-0 select-none font-serif text-[16rem] italic leading-none text-ink/[0.025]"
           >
             N
           </div>
 
-          <div className="relative z-10 flex h-20 shrink-0 items-center justify-between border-b border-white/10 px-5 sm:px-8">
+          <div className="relative z-10 flex h-20 shrink-0 items-center justify-between border-b border-ink/10 px-5 sm:px-8">
             <Link
               href="/"
               onClick={onClose}
-              className="text-xl font-semibold tracking-[-0.05em] text-white"
+              className="text-xl font-semibold tracking-[-0.05em] text-ink"
             >
               {siteConfig.logo}
               <span className="text-accent">.</span>
             </Link>
-            <button
-              ref={closeButtonRef}
-              type="button"
-              onClick={onClose}
-              aria-label="Close navigation menu"
-              className="group flex size-11 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-accent/60 hover:bg-accent hover:text-black"
-            >
-              <X className="size-5" strokeWidth={1.6} aria-hidden="true" />
-            </button>
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <button
+                ref={closeButtonRef}
+                type="button"
+                onClick={onClose}
+                aria-label="Close navigation menu"
+                className="group flex size-11 items-center justify-center rounded-full border border-ink/15 text-ink/70 transition-colors hover:border-accent/60 hover:bg-accent hover:text-black"
+              >
+                <X className="size-5" strokeWidth={1.6} aria-hidden="true" />
+              </button>
+            </div>
           </div>
 
           <motion.div
@@ -154,7 +158,7 @@ export function MobileMenu({ open, activeSection, onClose }: MobileMenuProps) {
             }}
           >
             <nav aria-label="Mobile primary">
-              <ul className="border-t border-white/10">
+              <ul className="border-t border-ink/10">
                 {siteConfig.nav.map((item, index) => {
                   const active = activeSection === item.section;
 
@@ -172,7 +176,7 @@ export function MobileMenu({ open, activeSection, onClose }: MobileMenuProps) {
                           },
                         },
                       }}
-                      className="border-b border-white/10"
+                      className="border-b border-ink/10"
                     >
                       <Link
                         href={item.href}
@@ -181,21 +185,21 @@ export function MobileMenu({ open, activeSection, onClose }: MobileMenuProps) {
                         className="group flex items-center justify-between gap-5 py-4 sm:py-5"
                       >
                         <span className="flex items-baseline gap-4">
-                          <span className="w-5 font-mono text-[9px] tracking-[0.18em] text-white/25">
+                          <span className="w-5 font-mono text-[9px] tracking-[0.18em] text-ink/25">
                             0{index + 1}
                           </span>
                           <span
                             className={
                               active
                                 ? "font-serif text-[2rem] italic leading-none tracking-[-0.02em] text-accent sm:text-4xl"
-                                : "font-serif text-[2rem] italic leading-none tracking-[-0.02em] text-white/90 transition-colors group-hover:text-accent sm:text-4xl"
+                                : "font-serif text-[2rem] italic leading-none tracking-[-0.02em] text-ink/90 transition-colors group-hover:text-accent sm:text-4xl"
                             }
                           >
                             {item.label}
                           </span>
                         </span>
                         <ArrowUpRight
-                          className="size-4 text-white/25 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+                          className="size-4 text-ink/25 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
                           aria-hidden="true"
                         />
                       </Link>
@@ -242,11 +246,11 @@ export function MobileMenu({ open, activeSection, onClose }: MobileMenuProps) {
                 </p>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="mt-2 inline-block break-all text-sm text-white/80 transition-colors hover:text-accent"
+                  className="mt-2 inline-block break-all text-sm text-ink/80 transition-colors hover:text-accent"
                 >
                   {siteConfig.email}
                 </a>
-                <div className="mt-3 flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.16em] text-white/40">
+                <div className="mt-3 flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.16em] text-ink/40">
                   <span className="size-1.5 animate-blink rounded-full bg-accent" aria-hidden="true" />
                   {siteConfig.availability}
                 </div>

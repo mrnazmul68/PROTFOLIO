@@ -27,12 +27,12 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
 
   return (
     <div>
-      <div className="flex flex-col gap-5 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-5 border-b border-ink/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2.5">
           <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-subtle">
             Filter
           </span>
-          <span className="h-px w-5 bg-white/10" aria-hidden="true" />
+          <span className="h-px w-5 bg-ink/10" aria-hidden="true" />
           <div className="flex flex-wrap gap-1.5" role="group" aria-label="Filter projects by category">
             {filters.map((filter) => {
               const active = filter === activeFilter;
@@ -53,14 +53,14 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
                     "rounded-full border px-3 py-1.5 text-[10px] transition-all duration-300",
                     active
                       ? "border-accent/50 bg-accent text-[#080808]"
-                      : "border-white/10 text-muted hover:border-white/20 hover:text-white",
+                      : "border-ink/10 text-muted hover:border-ink/20 hover:text-ink",
                   )}
                 >
                   {filter}
                   <span
                     className={cn(
                       "ml-1.5 font-mono text-[8px]",
-                      active ? "text-black/55" : "text-white/25",
+                      active ? "text-black/55" : "text-ink/25",
                     )}
                   >
                     {String(count).padStart(2, "0")}
@@ -72,7 +72,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
         </div>
 
         <p
-          className="font-mono text-[8px] uppercase tracking-[0.16em] text-white/30"
+          className="font-mono text-[8px] uppercase tracking-[0.16em] text-ink/30"
           aria-live="polite"
         >
           Showing {String(filteredProjects.length).padStart(2, "0")} of{" "}

@@ -154,16 +154,16 @@ export function Hero() {
               data-hero-eyebrow
               className="flex flex-wrap items-center gap-3"
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.03] px-3 py-1.5 backdrop-blur-sm">
+              <span className="inline-flex items-center gap-2 rounded-full border border-ink/12 bg-ink/[0.03] px-3 py-1.5 backdrop-blur-sm">
                 <span className="relative flex size-1.5">
                   <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent opacity-60" />
                   <span className="relative inline-flex size-1.5 rounded-full bg-accent" />
                 </span>
-                <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/70">
+                <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-ink/70">
                   {siteConfig.availability}
                 </span>
               </span>
-              <span className="hidden items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.18em] text-white/25 sm:flex">
+              <span className="hidden items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.18em] text-ink/25 sm:flex">
                 <MapPin className="size-2.5" strokeWidth={1.6} aria-hidden="true" />
                 {siteConfig.location}
               </span>
@@ -174,7 +174,7 @@ export function Hero() {
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-muted">
                 Hello, I&apos;m
               </p>
-              <span className="font-mono text-[9px] tracking-[0.18em] text-white/20">
+              <span className="font-mono text-[9px] tracking-[0.18em] text-ink/20">
                 / 001
               </span>
             </div>
@@ -187,7 +187,7 @@ export function Hero() {
               >
                 <span
                   data-hero-line
-                  className="block text-[clamp(4.2rem,11.2vw,10.2rem)] font-semibold leading-[0.8] tracking-[-0.075em] text-white"
+                  className="block text-[clamp(4.2rem,11.2vw,10.2rem)] font-semibold leading-[0.8] tracking-[-0.075em] text-ink"
                 >
                   NAZMUL
                 </span>
@@ -197,7 +197,7 @@ export function Hero() {
                   data-hero-line
                   className="flex items-end gap-[0.06em] text-[clamp(4.2rem,11.2vw,10.2rem)] leading-[0.8] tracking-[-0.06em]"
                 >
-                  <em className="font-serif font-normal italic tracking-[-0.045em] text-white">
+                  <em className="font-serif font-normal italic tracking-[-0.045em] text-ink">
                     Islam
                   </em>
                   <span className="mb-[0.16em] size-[0.1em] shrink-0 rounded-full bg-accent shadow-[0_0_30px_rgba(255,48,48,0.7)]" />
@@ -209,10 +209,10 @@ export function Hero() {
               data-hero-meta
               className="mt-5 flex flex-wrap items-center gap-3 sm:mt-6"
             >
-              <span className="font-mono text-[9px] uppercase tracking-[0.24em] text-white/80">
+              <span className="font-mono text-[9px] uppercase tracking-[0.24em] text-ink/80">
                 Full Stack Developer
               </span>
-              <span className="h-px w-10 bg-white/15" aria-hidden="true" />
+              <span className="h-px w-10 bg-ink/15" aria-hidden="true" />
               <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-subtle">
                 {siteConfig.department}
               </span>
@@ -275,7 +275,7 @@ export function Hero() {
               <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-subtle">
                 Find me
               </span>
-              <span className="h-px w-8 bg-white/10" aria-hidden="true" />
+              <span className="h-px w-8 bg-ink/10" aria-hidden="true" />
               <SocialLinks />
             </div>
           </div>
@@ -283,13 +283,13 @@ export function Hero() {
 
         <div
           data-hero-footer
-          className="mt-12 flex flex-wrap items-center justify-between gap-5 border-t border-white/10 pt-5 sm:mt-14"
+          className="mt-12 flex flex-wrap items-center justify-between gap-5 border-t border-ink/10 pt-5 sm:mt-14"
         >
           <a
             href="#about"
-            className="group inline-flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.22em] text-white/45 transition-colors hover:text-white"
+            className="group inline-flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.22em] text-ink/45 transition-colors hover:text-ink"
           >
-            <span className="relative flex h-8 w-5 items-start justify-center rounded-full border border-white/15 pt-1.5">
+            <span className="relative flex h-8 w-5 items-start justify-center rounded-full border border-ink/15 pt-1.5">
               <span className="size-1 animate-[scroll-dot_2s_ease-in-out_infinite] rounded-full bg-accent" />
             </span>
             Scroll to explore
@@ -300,12 +300,12 @@ export function Hero() {
             />
           </a>
 
-          <div className="hidden items-center gap-8 font-mono text-[8px] uppercase tracking-[0.18em] text-white/30 md:flex">
+          <div className="hidden items-center gap-8 font-mono text-[8px] uppercase tracking-[0.18em] text-ink/30 md:flex">
             <span>{siteConfig.university}</span>
             <span>{siteConfig.semester}</span>
           </div>
 
-          <p className="hidden font-serif text-sm italic text-white/35 sm:block">
+          <p className="hidden font-serif text-sm italic text-ink/35 sm:block">
             Building, learning, iterating.
           </p>
         </div>

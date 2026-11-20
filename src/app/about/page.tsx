@@ -49,7 +49,7 @@ const principles = [
 export default function AboutPage() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-white/10 pb-16 pt-32 sm:pb-20 sm:pt-40">
+      <section className="relative overflow-hidden border-b border-ink/10 pb-16 pt-32 sm:pb-20 sm:pt-40">
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-grid opacity-[0.18] [mask-image:linear-gradient(to_bottom,black,transparent_92%)]"
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <span className="text-accent">.</span>
           </h1>
 
-          <div className="mt-10 grid gap-8 border-t border-white/10 pt-8 lg:grid-cols-12 lg:gap-12">
+          <div className="mt-10 grid gap-8 border-t border-ink/10 pt-8 lg:grid-cols-12 lg:gap-12">
             <p className="max-w-xl text-pretty text-sm leading-7 text-muted lg:col-span-7">
               I&apos;m Nazmul Islam Mazumdar, a Computer Science and Engineering
               student at {siteConfig.university} and an aspiring Full Stack Web
@@ -84,22 +84,22 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-x-6 gap-y-5 font-mono text-[8px] uppercase tracking-[0.16em] lg:col-span-5">
               <div>
                 <p className="text-subtle">Based in</p>
-                <p className="mt-1.5 text-white/75">{siteConfig.location}</p>
+                <p className="mt-1.5 text-ink/75">{siteConfig.location}</p>
               </div>
               <div>
                 <p className="text-subtle">Status</p>
-                <p className="mt-1.5 flex items-center gap-1.5 text-white/75">
+                <p className="mt-1.5 flex items-center gap-1.5 text-ink/75">
                   <span className="size-1.5 animate-blink rounded-full bg-accent" aria-hidden="true" />
                   {siteConfig.availability}
                 </p>
               </div>
               <div>
                 <p className="text-subtle">Studying</p>
-                <p className="mt-1.5 text-white/75">CSE · {siteConfig.semester}</p>
+                <p className="mt-1.5 text-ink/75">CSE · {siteConfig.semester}</p>
               </div>
               <div>
                 <p className="text-subtle">Focus</p>
-                <p className="mt-1.5 text-white/75">Full Stack Web</p>
+                <p className="mt-1.5 text-ink/75">Full Stack Web</p>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function AboutPage() {
                 </Reveal>
 
                 <Reveal delay={0.1}>
-                  <dl className="mt-6 divide-y divide-white/10 border border-white/10 px-5">
+                  <dl className="mt-6 divide-y divide-ink/10 border border-ink/10 px-5">
                     {[
                       ["University", siteConfig.university],
                       ["Department", siteConfig.department],
@@ -130,7 +130,7 @@ export default function AboutPage() {
                         <dt className="font-mono text-[8px] uppercase tracking-[0.18em] text-subtle">
                           {label}
                         </dt>
-                        <dd className="max-w-[60%] text-right text-[11px] leading-5 text-white/70">
+                        <dd className="max-w-[60%] text-right text-[11px] leading-5 text-ink/70">
                           {value}
                         </dd>
                       </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 <p className="font-mono text-[8px] uppercase tracking-[0.24em] text-accent/80">
                   The short biography
                 </p>
-                <p className="mt-4 text-balance font-serif text-[clamp(1.8rem,3vw,2.7rem)] italic leading-[1.15] text-white/90">
+                <p className="mt-4 text-balance font-serif text-[clamp(1.8rem,3vw,2.7rem)] italic leading-[1.15] text-ink/90">
                   Learning in public, one project and one concept at a time.
                 </p>
                 <div className="mt-7 space-y-5 text-[14px] leading-7 text-muted">
@@ -163,13 +163,13 @@ export default function AboutPage() {
               </Reveal>
 
               <Reveal delay={0.08} className="mt-10">
-                <div className="flex items-center gap-3 border-t border-white/10 pt-7">
+                <div className="flex items-center gap-3 border-t border-ink/10 pt-7">
                   <GraduationCap className="size-4 text-accent" strokeWidth={1.5} aria-hidden="true" />
-                  <h2 className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/65">
+                  <h2 className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/65">
                     Education
                   </h2>
                 </div>
-                <div className="mt-5 overflow-hidden border border-white/10 bg-[#0d0d0d]">
+                <div className="mt-5 overflow-hidden border border-ink/10 bg-card">
                   <div className="flex items-start gap-4 p-5 sm:p-6">
                     <span className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full border border-accent/25 bg-accent/[0.07] text-accent">
                       <GraduationCap className="size-4" strokeWidth={1.5} aria-hidden="true" />
@@ -178,14 +178,14 @@ export default function AboutPage() {
                       <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-subtle">
                         Current degree
                       </p>
-                      <h3 className="mt-1.5 text-base font-medium tracking-[-0.02em] text-white/90">
+                      <h3 className="mt-1.5 text-base font-medium tracking-[-0.02em] text-ink/90">
                         {siteConfig.university}
                       </h3>
                       <p className="mt-1 text-sm text-muted">
                         {siteConfig.department}
                       </p>
                       <div className="mt-3 flex flex-wrap gap-2">
-                        <span className="border border-white/10 px-2 py-1 font-mono text-[8px] uppercase tracking-[0.14em] text-white/50">
+                        <span className="border border-ink/10 px-2 py-1 font-mono text-[8px] uppercase tracking-[0.14em] text-ink/50">
                           {siteConfig.semester}
                         </span>
                         <span className="border border-accent/20 bg-accent/[0.05] px-2 py-1 font-mono text-[8px] uppercase tracking-[0.14em] text-accent/80">
@@ -197,10 +197,10 @@ export default function AboutPage() {
                 </div>
               </Reveal>
 
-              <Reveal delay={0.1} className="mt-10 border-t border-white/10 pt-7">
+              <Reveal delay={0.1} className="mt-10 border-t border-ink/10 pt-7">
                 <div className="flex items-center gap-3">
                   <BookOpen className="size-4 text-accent" strokeWidth={1.5} aria-hidden="true" />
-                  <h2 className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/65">
+                  <h2 className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/65">
                     How I try to work
                   </h2>
                 </div>
@@ -210,17 +210,17 @@ export default function AboutPage() {
                     return (
                       <div
                         key={principle.title}
-                        className="group flex gap-4 border border-white/[0.07] bg-white/[0.015] p-4 transition-colors duration-300 hover:border-accent/25 hover:bg-white/[0.03] sm:p-5"
+                        className="group flex gap-4 border border-ink/[0.07] bg-ink/[0.015] p-4 transition-colors duration-300 hover:border-accent/25 hover:bg-ink/[0.03] sm:p-5"
                       >
-                        <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center border border-white/10 text-white/35 transition-colors group-hover:border-accent/30 group-hover:text-accent">
+                        <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center border border-ink/10 text-ink/35 transition-colors group-hover:border-accent/30 group-hover:text-accent">
                           <Icon className="size-3.5" strokeWidth={1.5} aria-hidden="true" />
                         </span>
                         <div className="flex-1">
                           <div className="flex items-center justify-between gap-4">
-                            <h3 className="text-sm font-medium text-white/85">
+                            <h3 className="text-sm font-medium text-ink/85">
                               {principle.title}
                             </h3>
-                            <span className="font-mono text-[8px] text-white/20">
+                            <span className="font-mono text-[8px] text-ink/20">
                               {principle.index}
                             </span>
                           </div>
@@ -234,11 +234,11 @@ export default function AboutPage() {
                 </div>
               </Reveal>
 
-              <Reveal delay={0.12} className="mt-10 border-t border-white/10 pt-7">
+              <Reveal delay={0.12} className="mt-10 border-t border-ink/10 pt-7">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <Compass className="size-4 text-accent" strokeWidth={1.5} aria-hidden="true" />
-                    <h2 className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/65">
+                    <h2 className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/65">
                       Currently learning
                     </h2>
                   </div>
@@ -259,10 +259,10 @@ export default function AboutPage() {
                 </ul>
               </Reveal>
 
-              <Reveal delay={0.14} className="mt-10 border-t border-white/10 pt-7">
+              <Reveal delay={0.14} className="mt-10 border-t border-ink/10 pt-7">
                 <div className="flex items-center gap-3">
                   <Sparkles className="size-4 text-accent" strokeWidth={1.5} aria-hidden="true" />
-                  <h2 className="font-mono text-[9px] uppercase tracking-[0.2em] text-white/65">
+                  <h2 className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/65">
                     Beyond the screen
                   </h2>
                 </div>
@@ -270,7 +270,7 @@ export default function AboutPage() {
                   {siteConfig.interests.map((interest) => (
                     <li
                       key={interest}
-                      className="inline-flex items-center gap-2 border border-white/10 bg-white/[0.02] px-3 py-2 text-[10px] text-white/60"
+                      className="inline-flex items-center gap-2 border border-ink/10 bg-ink/[0.02] px-3 py-2 text-[10px] text-ink/60"
                     >
                       <span className="size-1 rounded-full bg-accent/70" aria-hidden="true" />
                       {interest}
@@ -288,7 +288,7 @@ export default function AboutPage() {
                     Read the journey
                   </Button>
                 </div>
-                <div className="mt-6 flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.16em] text-white/25">
+                <div className="mt-6 flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.16em] text-ink/25">
                   <MapPin className="size-3" strokeWidth={1.5} aria-hidden="true" />
                   {siteConfig.location} · Open to opportunities
                 </div>
@@ -298,13 +298,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-[#090909]">
+      <section className="border-t border-ink/10 bg-surface">
         <div className="wrap flex flex-col gap-6 py-12 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-subtle">
               Elsewhere
             </p>
-            <p className="mt-2 text-sm text-white/70">
+            <p className="mt-2 text-sm text-ink/70">
               Follow the work, or reach out directly.
             </p>
           </div>

@@ -41,7 +41,7 @@ export function SocialLinks({
                 href={link.href}
                 target={external ? "_blank" : undefined}
                 rel={external ? "noopener noreferrer" : undefined}
-                className="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-white"
+                className="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-ink"
               >
                 {link.label}
                 <ArrowUpRight
@@ -70,7 +70,7 @@ export function SocialLinks({
               aria-label={link.label}
               title={link.label}
               className={cn(
-                "group flex size-10 items-center justify-center rounded-full border border-white/10 text-muted transition-all duration-300 hover:border-accent/50 hover:bg-accent hover:text-[#080808]",
+                "group flex size-10 items-center justify-center rounded-full border border-ink/10 text-muted transition-all duration-300 hover:border-accent/50 hover:bg-accent hover:text-[#080808]",
                 iconClassName,
               )}
             >

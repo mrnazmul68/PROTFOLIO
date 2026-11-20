@@ -18,7 +18,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-white/10 pb-14 pt-32 sm:pb-16 sm:pt-40">
+      <section className="relative overflow-hidden border-b border-ink/10 pb-14 pt-32 sm:pb-16 sm:pt-40">
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-grid opacity-[0.16] [mask-image:linear-gradient(to_bottom,black,transparent_94%)]"
@@ -48,9 +48,9 @@ export default function BlogPage() {
                 Notes on the web, computer science and the process of learning.
                 Writing is how I make sure I actually understand the thing.
               </p>
-              <div className="mt-5 flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.16em] text-white/35">
+              <div className="mt-5 flex items-center gap-3 font-mono text-[8px] uppercase tracking-[0.16em] text-ink/35">
                 <span>{String(posts.length).padStart(2, "0")} entries</span>
-                <span className="h-px w-6 bg-white/15" aria-hidden="true" />
+                <span className="h-px w-6 bg-ink/15" aria-hidden="true" />
                 <span>Updated as I learn</span>
               </div>
             </div>
@@ -63,16 +63,16 @@ export default function BlogPage() {
           <BlogExplorer posts={posts} categories={categories} />
 
           <Reveal delay={0.08} className="mt-14">
-            <div className="flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-4 border-t border-ink/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
               <p className="max-w-xl text-[11px] leading-6 text-subtle">
-                <span className="text-white/50">On the samples:</span> each entry
+                <span className="text-ink/50">On the samples:</span> each entry
                 marked &ldquo;sample article&rdquo; is a demonstration post for
                 the journal layout. They are educational pieces, not fictional
                 diary entries or claims of professional experience.
               </p>
               <Link
                 href="/contact"
-                className="shrink-0 font-mono text-[8px] uppercase tracking-[0.18em] text-white/40 transition-colors hover:text-accent"
+                className="shrink-0 font-mono text-[8px] uppercase tracking-[0.18em] text-ink/40 transition-colors hover:text-accent"
               >
                 Suggest a topic →
               </Link>

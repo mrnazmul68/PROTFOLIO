@@ -15,7 +15,7 @@ export function BackToTop() {
     <button
       type="button"
       onClick={scrollToTop}
-      className="group flex size-10 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all duration-300 hover:border-accent/50 hover:text-white"
+      className="group flex size-10 items-center justify-center rounded-full border border-ink/15 text-ink/60 transition-all duration-300 hover:border-accent/50 hover:text-ink"
       aria-label="Back to top"
     >
       <ArrowUp

@@ -34,7 +34,7 @@ export function ReadingProgress() {
   return (
     <div
       aria-hidden="true"
-      className="fixed inset-x-0 top-0 z-[80] h-[2px] bg-white/[0.04]"
+      className="fixed inset-x-0 top-0 z-[80] h-[2px] bg-ink/[0.04]"
     >
       <div
         className="h-full origin-left bg-gradient-to-r from-[#ff5a5a] via-accent to-accent-deep"

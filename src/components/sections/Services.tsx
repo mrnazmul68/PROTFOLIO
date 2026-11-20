@@ -26,7 +26,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="section-pad relative overflow-hidden border-t border-white/10 bg-[#090909]"
+      className="section-pad relative overflow-hidden border-t border-ink/10 bg-surface"
     >
       <div
         aria-hidden="true"
@@ -60,7 +60,7 @@ export function Services() {
               <Reveal key={service.title} delay={index * 0.06} className="h-full">
                 <article
                   className={cn(
-                    "group relative flex h-full flex-col overflow-hidden border border-white/10 bg-[#0c0c0c] p-6 transition-all duration-500 hover:border-accent/30 hover:bg-[#101010] sm:p-8",
+                    "group relative flex h-full flex-col overflow-hidden border border-ink/10 bg-card p-6 transition-all duration-500 hover:border-accent/30 hover:bg-elevated sm:p-8",
                     isSecondRow ? "" : "",
                   )}
                 >
@@ -70,26 +70,26 @@ export function Services() {
                   />
 
                   <div className="relative z-10 flex items-start justify-between">
-                    <span className="flex size-11 items-center justify-center border border-white/10 bg-white/[0.025] text-white/60 transition-all duration-500 group-hover:border-accent/30 group-hover:bg-accent/[0.07] group-hover:text-accent">
+                    <span className="flex size-11 items-center justify-center border border-ink/10 bg-ink/[0.025] text-ink/60 transition-all duration-500 group-hover:border-accent/30 group-hover:bg-accent/[0.07] group-hover:text-accent">
                       <Icon className="size-5" strokeWidth={1.4} aria-hidden="true" />
                     </span>
-                    <span className="font-serif text-4xl italic leading-none text-white/[0.07] transition-colors duration-500 group-hover:text-accent/15">
+                    <span className="font-serif text-4xl italic leading-none text-ink/[0.07] transition-colors duration-500 group-hover:text-accent/15">
                       {service.index}
                     </span>
                   </div>
 
-                  <h3 className="relative z-10 mt-9 text-[clamp(1.4rem,2.2vw,1.85rem)] font-medium leading-tight tracking-[-0.04em] text-white/90">
+                  <h3 className="relative z-10 mt-9 text-[clamp(1.4rem,2.2vw,1.85rem)] font-medium leading-tight tracking-[-0.04em] text-ink/90">
                     {service.title}
                   </h3>
                   <p className="relative z-10 mt-3 max-w-sm text-[13px] leading-6 text-muted">
                     {service.description}
                   </p>
 
-                  <ul className="relative z-10 mt-7 space-y-2.5 border-t border-white/[0.08] pt-5">
+                  <ul className="relative z-10 mt-7 space-y-2.5 border-t border-ink/[0.08] pt-5">
                     {service.capabilities.map((capability) => (
                       <li
                         key={capability}
-                        className="flex items-start gap-2.5 text-[11px] leading-5 text-white/55"
+                        className="flex items-start gap-2.5 text-[11px] leading-5 text-ink/55"
                       >
                         <span
                           className="mt-[0.44rem] h-px w-3 shrink-0 bg-accent/60"
@@ -102,7 +102,7 @@ export function Services() {
 
                   <Link
                     href="/contact"
-                    className="relative z-10 mt-7 inline-flex w-fit items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-white/45 transition-colors duration-300 hover:text-accent"
+                    className="relative z-10 mt-7 inline-flex w-fit items-center gap-2 text-[10px] uppercase tracking-[0.16em] text-ink/45 transition-colors duration-300 hover:text-accent"
                   >
                     Discuss this
                     <ArrowUpRight

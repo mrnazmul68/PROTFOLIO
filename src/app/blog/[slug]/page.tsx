@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         }}
       />
 
-      <header className="relative overflow-hidden border-b border-white/10 pb-10 pt-32 sm:pt-40">
+      <header className="relative overflow-hidden border-b border-ink/10 pb-10 pt-32 sm:pt-40">
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-grid opacity-[0.14] [mask-image:linear-gradient(to_bottom,black,transparent_95%)]"
@@ -126,7 +126,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.category}
               </span>
               {post.sample ? (
-                <span className="inline-flex items-center gap-1.5 border border-white/10 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.16em] text-white/45">
+                <span className="inline-flex items-center gap-1.5 border border-ink/10 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.16em] text-ink/45">
                   <FlaskConical className="size-2.5" strokeWidth={1.5} aria-hidden="true" />
                   Sample article
                 </span>
@@ -141,9 +141,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {post.description}
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-white/10 pt-5 font-mono text-[8px] uppercase tracking-[0.16em] text-subtle">
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-ink/10 pt-5 font-mono text-[8px] uppercase tracking-[0.16em] text-subtle">
               <span className="flex items-center gap-2">
-                <span className="flex size-7 items-center justify-center rounded-full border border-white/15 font-serif text-[11px] italic text-white/60">
+                <span className="flex size-7 items-center justify-center rounded-full border border-ink/15 font-serif text-[11px] italic text-ink/60">
                   NI
                 </span>
                 {siteConfig.displayName}
@@ -176,7 +176,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <aside className="hidden lg:col-span-3 lg:block">
               <div className="sticky top-32">
                 <TableOfContents items={post.toc} />
-                <div className="mt-8 border-t border-white/10 pt-5">
+                <div className="mt-8 border-t border-ink/10 pt-5">
                   <p className="mb-3 font-mono text-[8px] uppercase tracking-[0.22em] text-subtle">
                     Share
                   </p>
@@ -186,14 +186,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </aside>
 
             <div className="min-w-0 lg:col-span-8 lg:col-start-4">
-              <details className="group mb-8 border border-white/10 bg-white/[0.015] lg:hidden">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 font-mono text-[8px] uppercase tracking-[0.18em] text-white/55">
+              <details className="group mb-8 border border-ink/10 bg-ink/[0.015] lg:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 font-mono text-[8px] uppercase tracking-[0.18em] text-ink/55">
                   On this page
-                  <span className="text-white/25 transition-transform duration-300 group-open:rotate-45">
+                  <span className="text-ink/25 transition-transform duration-300 group-open:rotate-45">
                     +
                   </span>
                 </summary>
-                <div className="border-t border-white/10 px-4 py-4">
+                <div className="border-t border-ink/10 px-4 py-4">
                   <TableOfContents items={post.toc} />
                 </div>
               </details>
@@ -202,7 +202,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="mb-8 flex items-start gap-3 border border-accent/20 bg-accent/[0.035] p-4">
                   <FlaskConical className="mt-0.5 size-4 shrink-0 text-accent/70" strokeWidth={1.5} aria-hidden="true" />
                   <p className="text-[11px] leading-5 text-muted">
-                    <span className="text-white/70">Demonstration article.</span>{" "}
+                    <span className="text-ink/70">Demonstration article.</span>{" "}
                     This piece is a clearly labelled sample created to show the
                     journal&apos;s reading experience. It is educational content,
                     not a fictional account of personal experience.
@@ -214,12 +214,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <MdxContent source={post.content} />
               </div>
 
-              <div className="mt-12 flex flex-wrap items-center justify-between gap-5 border-y border-white/10 py-5">
+              <div className="mt-12 flex flex-wrap items-center justify-between gap-5 border-y border-ink/10 py-5">
                 <ul className="flex flex-wrap gap-2" aria-label="Article tags">
                   {post.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="border border-white/10 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.12em] text-white/45"
+                      className="border border-ink/10 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.12em] text-ink/45"
                     >
                       #{tag}
                     </li>
@@ -229,15 +229,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               <Reveal className="mt-12">
-                <div className="flex flex-col gap-5 border border-white/10 bg-[#0d0d0d] p-5 sm:flex-row sm:items-start sm:p-6">
-                  <span className="flex size-14 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.03] font-serif text-xl italic text-white/70">
+                <div className="flex flex-col gap-5 border border-ink/10 bg-card p-5 sm:flex-row sm:items-start sm:p-6">
+                  <span className="flex size-14 shrink-0 items-center justify-center rounded-full border border-ink/15 bg-ink/[0.03] font-serif text-xl italic text-ink/70">
                     NI
                   </span>
                   <div className="flex-1">
                     <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-subtle">
                       Written by
                     </p>
-                    <p className="mt-1.5 text-sm font-medium text-white/85">
+                    <p className="mt-1.5 text-sm font-medium text-ink/85">
                       {siteConfig.name}
                     </p>
                     <p className="mt-2 max-w-lg text-[11px] leading-5 text-subtle">
@@ -245,7 +245,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     </p>
                     <Link
                       href="/about"
-                      className="group mt-3 inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.14em] text-white/55 transition-colors hover:text-accent"
+                      className="group mt-3 inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.14em] text-ink/55 transition-colors hover:text-accent"
                     >
                       About Nazmul
                       <ArrowUpRight className="size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
@@ -257,7 +257,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="mt-10">
                 <Link
                   href="/blog"
-                  className="group inline-flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.18em] text-subtle transition-colors hover:text-white"
+                  className="group inline-flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.18em] text-subtle transition-colors hover:text-ink"
                 >
                   <ArrowLeft className="size-3.5 transition-transform group-hover:-translate-x-0.5" aria-hidden="true" />
                   Back to the journal
@@ -265,11 +265,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {relatedPosts.length > 0 ? (
-                <section className="mt-16 border-t border-white/10 pt-8" aria-labelledby="related-heading">
+                <section className="mt-16 border-t border-ink/10 pt-8" aria-labelledby="related-heading">
                   <div className="flex items-end justify-between gap-4">
                     <h2
                       id="related-heading"
-                      className="text-2xl font-medium tracking-[-0.04em] text-white/85"
+                      className="text-2xl font-medium tracking-[-0.04em] text-ink/85"
                     >
                       Keep reading
                     </h2>

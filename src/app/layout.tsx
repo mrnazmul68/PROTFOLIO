@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -9,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { GSAPProvider } from "@/components/animations/GSAPProvider";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { ThemeScript } from "@/components/ui/ThemeToggle";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -102,7 +104,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#080808",
-  colorScheme: "dark",
+  colorScheme: "light dark",
 };
 
 const structuredData = {
@@ -162,9 +164,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable}`}
     >
       <body className="relative min-h-screen bg-background font-sans text-foreground antialiased">
+        <ThemeScript />
         <a href="#main" className="skip-link">
           Skip to content
         </a>
@@ -181,6 +185,7 @@ export default function RootLayout({
           <Footer />
           <WhatsAppButton />
         </GSAPProvider>
+        <Analytics />
       </body>
     </html>
   );

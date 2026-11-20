@@ -16,13 +16,13 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
     <article className={cn("group", className)}>
       <div className="mb-4 flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.22em]">
         <span className="text-accent">{project.index}</span>
-        <span className="h-px w-6 bg-white/20" aria-hidden="true" />
+        <span className="h-px w-6 bg-ink/20" aria-hidden="true" />
         <span className="text-subtle">{project.category}</span>
       </div>
 
       <Link
         href={`/projects/${project.slug}`}
-        className="relative block overflow-hidden border border-white/10 transition-colors duration-500 group-hover:border-accent/30"
+        className="relative block overflow-hidden border border-ink/10 transition-colors duration-500 group-hover:border-accent/30"
         aria-label={`View the ${project.title} project details`}
       >
         <ProjectArtwork
@@ -30,8 +30,8 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           index={project.index}
           title={project.title}
         />
-        <div className="pointer-events-none absolute inset-x-4 bottom-4 z-20 flex translate-y-3 items-center justify-between opacity-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0 group-hover:opacity-100">
-          <span className="border border-white/15 bg-black/60 px-3 py-2 font-mono text-[8px] uppercase tracking-[0.2em] text-white/80 backdrop-blur-md">
+        <div className="theme-dark pointer-events-none absolute inset-x-4 bottom-4 z-20 flex translate-y-3 items-center justify-between opacity-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0 group-hover:opacity-100">
+          <span className="border border-ink/15 bg-black/60 px-3 py-2 font-mono text-[8px] uppercase tracking-[0.2em] text-ink/80 backdrop-blur-md">
             View case study
           </span>
           <span className="flex size-9 items-center justify-center rounded-full bg-accent text-[#080808]">
@@ -56,13 +56,13 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </div>
         <span
           aria-hidden="true"
-          className="hidden shrink-0 font-serif text-4xl italic leading-none text-white/10 sm:block"
+          className="hidden shrink-0 font-serif text-4xl italic leading-none text-ink/10 sm:block"
         >
           {project.index}
         </span>
       </div>
 
-      <div className="mt-5 flex flex-wrap items-center justify-between gap-x-5 gap-y-3 border-t border-white/[0.08] pt-4">
+      <div className="mt-5 flex flex-wrap items-center justify-between gap-x-5 gap-y-3 border-t border-ink/[0.08] pt-4">
         <ul
           className="flex flex-wrap items-center gap-x-2.5 gap-y-1"
           aria-label={`Technologies used in ${project.title}`}
@@ -73,7 +73,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
               className="flex items-center gap-2.5 font-mono text-[8px] uppercase tracking-[0.13em] text-subtle"
             >
               {index > 0 ? (
-                <span className="size-0.5 rounded-full bg-white/20" aria-hidden="true" />
+                <span className="size-0.5 rounded-full bg-ink/20" aria-hidden="true" />
               ) : null}
               {technology}
             </li>

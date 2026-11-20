@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
 import { MobileMenu } from "@/components/layout/MobileMenu";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 function getPageSection(pathname: string): string | null {
   if (pathname.startsWith("/projects")) return "projects";
@@ -46,14 +47,14 @@ export function Navbar() {
           className={cn(
             "mx-auto flex items-center justify-between gap-4 rounded-full border backdrop-blur-xl transition-[max-width,background-color,height,border-color,box-shadow,padding] duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]",
             scrolled
-              ? "h-14 max-w-6xl border-white/15 bg-[#0a0a0a]/92 px-4 shadow-[0_18px_55px_-24px_rgba(0,0,0,0.9)] sm:px-5"
-              : "h-16 max-w-[86rem] border-white/10 bg-[#0a0a0a]/55 px-4 sm:px-6",
+              ? "h-14 max-w-6xl border-ink/15 bg-[var(--nav-bg-strong)] px-4 shadow-[var(--nav-shadow)] sm:px-5"
+              : "h-16 max-w-[86rem] border-ink/10 bg-[var(--nav-bg)] px-4 sm:px-6",
           )}
         >
           <Link
             href="/"
             aria-label={`${siteConfig.displayName} — home`}
-            className="group flex shrink-0 items-center text-[1.15rem] font-semibold tracking-[-0.05em] text-white"
+            className="group flex shrink-0 items-center text-[1.15rem] font-semibold tracking-[-0.05em] text-ink"
           >
             {siteConfig.logo}
             <span className="text-accent transition-transform duration-300 group-hover:scale-125">
@@ -63,7 +64,7 @@ export function Navbar() {
 
           <nav
             aria-label="Primary"
-            className="hidden items-center rounded-full border border-white/[0.08] bg-white/[0.025] px-1.5 py-1 lg:flex"
+            className="hidden items-center rounded-full border border-ink/[0.08] bg-ink/[0.025] px-1.5 py-1 lg:flex"
           >
             {siteConfig.nav.map((item) => {
               const active = activeSection === item.section;
@@ -76,8 +77,8 @@ export function Navbar() {
                   className={cn(
                     "relative rounded-full px-3.5 py-2 text-[11px] font-medium transition-colors duration-300",
                     active
-                      ? "bg-white/[0.07] text-white"
-                      : "text-muted hover:bg-white/[0.04] hover:text-white",
+                      ? "bg-ink/[0.07] text-ink"
+                      : "text-muted hover:bg-ink/[0.04] hover:text-ink",
                   )}
                 >
                   {item.label}
@@ -94,21 +95,23 @@ export function Navbar() {
           </nav>
 
           <div className="flex shrink-0 items-center gap-2.5">
-            <div className="hidden items-center gap-2 border-r border-white/10 pr-4 xl:flex">
+            <div className="hidden items-center gap-2 border-r border-ink/10 pr-4 xl:flex">
               <span
                 className="size-1.5 animate-blink rounded-full bg-accent"
                 aria-hidden="true"
               />
-              <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/45">
+              <span className="font-mono text-[8px] uppercase tracking-[0.18em] text-ink/45">
                 Open to work
               </span>
             </div>
 
+            <ThemeToggle />
+
             <Link
               href="/contact"
               className={cn(
-                "group hidden h-9 items-center gap-1.5 rounded-full bg-accent px-4 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#080808] transition-all duration-300 hover:bg-[#ff4d4d] sm:inline-flex",
-                pathname.startsWith("/contact") && "ring-1 ring-white/40",
+                "group hidden h-9 items-center gap-1.5 rounded-full bg-accent px-4 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#080808] transition-all duration-300 hover:bg-accent-hover sm:inline-flex",
+                pathname.startsWith("/contact") && "ring-1 ring-ink/40",
               )}
             >
               Let&apos;s Talk
@@ -125,7 +128,7 @@ export function Navbar() {
               aria-label="Open navigation menu"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
-              className="flex size-10 items-center justify-center rounded-full border border-white/15 text-white/80 transition-colors hover:border-accent/50 hover:text-white lg:hidden"
+              className="flex size-10 items-center justify-center rounded-full border border-ink/15 text-ink/80 transition-colors hover:border-accent/50 hover:text-ink lg:hidden"
             >
               <Menu className="size-[18px]" strokeWidth={1.6} aria-hidden="true" />
             </button>

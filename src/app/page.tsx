@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Marquee items={marqueeItems} className="bg-[#090909]" />
+      <Marquee items={marqueeItems} className="bg-surface" />
       <About />
       <Skills />
       <Journey />

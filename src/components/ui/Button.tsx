@@ -18,10 +18,10 @@ const base =
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "btn-shine bg-accent text-[#080808] shadow-[0_12px_42px_-16px_rgba(255,48,48,0.65)] hover:bg-[#ff4d4d] hover:shadow-[0_18px_50px_-14px_rgba(255,48,48,0.55)]",
+    "btn-shine bg-accent text-[#080808] shadow-[0_12px_42px_-16px_rgba(255,48,48,0.65)] hover:bg-accent-hover hover:shadow-[0_18px_50px_-14px_rgba(255,48,48,0.55)]",
   outline:
-    "border border-white/15 bg-white/[0.02] text-white hover:border-accent/50 hover:bg-white/[0.05]",
-  ghost: "text-muted hover:text-white",
+    "border border-ink/15 bg-ink/[0.02] text-ink hover:border-accent/50 hover:bg-ink/[0.05]",
+  ghost: "text-muted hover:text-ink",
 };
 
 const sizes: Record<ButtonSize, string> = {

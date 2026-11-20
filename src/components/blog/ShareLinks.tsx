@@ -42,7 +42,7 @@ export function ShareLinks({ title, url }: ShareLinksProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share this article on X"
-        className="flex size-9 items-center justify-center rounded-full border border-white/10 text-white/45 transition-colors hover:border-accent/40 hover:text-accent"
+        className="flex size-9 items-center justify-center rounded-full border border-ink/10 text-ink/45 transition-colors hover:border-accent/40 hover:text-accent"
       >
         <span className="font-mono text-[11px]">X</span>
       </a>
@@ -51,7 +51,7 @@ export function ShareLinks({ title, url }: ShareLinksProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share this article on LinkedIn"
-        className="flex size-9 items-center justify-center rounded-full border border-white/10 text-white/45 transition-colors hover:border-accent/40 hover:text-accent"
+        className="flex size-9 items-center justify-center rounded-full border border-ink/10 text-ink/45 transition-colors hover:border-accent/40 hover:text-accent"
       >
         <BrandIcon name="linkedin" className="size-3.5" />
       </a>
@@ -60,7 +60,7 @@ export function ShareLinks({ title, url }: ShareLinksProps) {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Share this article on Facebook"
-        className="flex size-9 items-center justify-center rounded-full border border-white/10 text-white/45 transition-colors hover:border-accent/40 hover:text-accent"
+        className="flex size-9 items-center justify-center rounded-full border border-ink/10 text-ink/45 transition-colors hover:border-accent/40 hover:text-accent"
       >
         <BrandIcon name="facebook" className="size-3.5" />
       </a>
@@ -68,7 +68,7 @@ export function ShareLinks({ title, url }: ShareLinksProps) {
         type="button"
         onClick={copyLink}
         aria-label={copied ? "Article link copied" : "Copy article link"}
-        className="flex size-9 items-center justify-center rounded-full border border-white/10 text-white/45 transition-colors hover:border-accent/40 hover:text-accent"
+        className="flex size-9 items-center justify-center rounded-full border border-ink/10 text-ink/45 transition-colors hover:border-accent/40 hover:text-accent"
       >
         {copied ? (
           <Check className="size-3.5 text-accent" strokeWidth={1.8} aria-hidden="true" />

@@ -79,7 +79,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div
-        className="relative flex min-h-[28rem] flex-col items-center justify-center overflow-hidden border border-white/10 bg-[#0d0d0d] p-8 text-center"
+        className="relative flex min-h-[28rem] flex-col items-center justify-center overflow-hidden border border-ink/10 bg-card p-8 text-center"
         role="status"
         aria-live="polite"
       >
@@ -97,7 +97,7 @@ export function ContactForm() {
         <p className="relative z-10 mt-6 font-mono text-[8px] uppercase tracking-[0.24em] text-accent/80">
           Message sent
         </p>
-        <h3 className="relative z-10 mt-3 text-balance font-serif text-4xl italic text-white/90">
+        <h3 className="relative z-10 mt-3 text-balance font-serif text-4xl italic text-ink/90">
           Thank you.
         </h3>
         <p className="relative z-10 mt-4 max-w-sm text-[13px] leading-6 text-muted">
@@ -120,20 +120,20 @@ export function ContactForm() {
   }
 
   return (
-    <div className="relative overflow-hidden border border-white/10 bg-[#0d0d0d] p-5 sm:p-7 lg:p-8">
+    <div className="relative overflow-hidden border border-ink/10 bg-card p-5 sm:p-7 lg:p-8">
       <div
         aria-hidden="true"
         className="absolute -right-24 -top-28 size-72 rounded-full bg-[radial-gradient(circle,rgba(255,48,48,0.12),transparent_68%)] blur-2xl"
       />
 
-      <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-5">
+      <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 border-b border-ink/10 pb-5">
         <div>
           <p className="font-mono text-[8px] uppercase tracking-[0.24em] text-subtle">
             Project brief / 01
           </p>
-          <p className="mt-1.5 text-sm text-white/80">Tell me a little about it.</p>
+          <p className="mt-1.5 text-sm text-ink/80">Tell me a little about it.</p>
         </div>
-        <span className="flex items-center gap-2 font-mono text-[7px] uppercase tracking-[0.16em] text-white/35">
+        <span className="flex items-center gap-2 font-mono text-[7px] uppercase tracking-[0.16em] text-ink/35">
           <span className="size-1.5 animate-blink rounded-full bg-accent" aria-hidden="true" />
           {siteConfig.availability}
         </span>
@@ -159,7 +159,7 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="name"
-              className="mb-2 block font-mono text-[8px] uppercase tracking-[0.2em] text-white/50"
+              className="mb-2 block font-mono text-[8px] uppercase tracking-[0.2em] text-ink/50"
             >
               Name <span className="text-accent">*</span>
             </label>
@@ -173,12 +173,12 @@ export function ContactForm() {
               aria-describedby={errors.name ? "name-error" : undefined}
               aria-required="true"
               className={cn(
-                "w-full border border-white/10 bg-white/[0.02] px-3.5 py-3 text-sm text-white outline-none transition-colors duration-300 placeholder:text-white/20 focus:border-accent/60 focus:ring-1 focus:ring-accent/30",
+                "w-full border border-ink/10 bg-ink/[0.02] px-3.5 py-3 text-sm text-ink outline-none transition-colors duration-300 placeholder:text-ink/20 focus:border-accent/60 focus:ring-1 focus:ring-accent/30",
                 errors.name && "border-accent/60",
               )}
             />
             {errors.name ? (
-              <p id="name-error" role="alert" className="mt-1.5 text-[10px] text-[#ff8181]">
+              <p id="name-error" role="alert" className="mt-1.5 text-[10px] text-danger">
                 {errors.name.message}
               </p>
             ) : null}
@@ -187,7 +187,7 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="email"
-              className="mb-2 block font-mono text-[8px] uppercase tracking-[0.2em] text-white/50"
+              className="mb-2 block font-mono text-[8px] uppercase tracking-[0.2em] text-ink/50"
             >
               Email <span className="text-accent">*</span>
             </label>
@@ -201,12 +201,12 @@ export function ContactForm() {
               aria-describedby={errors.email ? "email-error" : undefined}
               aria-required="true"
               className={cn(
-                "w-full border border-white/10 bg-white/[0.02] px-3.5 py-3 text-sm text-white outline-none transition-colors duration-300 placeholder:text-white/20 focus:border-accent/60 focus:ring-1 focus:ring-accent/30",
+                "w-full border border-ink/10 bg-ink/[0.02] px-3.5 py-3 text-sm text-ink outline-none transition-colors duration-300 placeholder:text-ink/20 focus:border-accent/60 focus:ring-1 focus:ring-accent/30",
                 errors.email && "border-accent/60",
               )}
             />
             {errors.email ? (
-              <p id="email-error" role="alert" className="mt-1.5 text-[10px] text-[#ff8181]">
+              <p id="email-error" role="alert" className="mt-1.5 text-[10px] text-danger">
                 {errors.email.message}
               </p>
             ) : null}
@@ -216,7 +216,7 @@ export function ContactForm() {
         <div className="mt-5">
           <label
             htmlFor="subject"
-            className="mb-2 block font-mono text-[8px] uppercase tracking-[0.2em] text-white/50"
+            className="mb-2 block font-mono text-[8px] uppercase tracking-[0.2em] text-ink/50"
           >
             Subject <span className="text-accent">*</span>
           </label>
@@ -229,12 +229,12 @@ export function ContactForm() {
             aria-describedby={errors.subject ? "subject-error" : undefined}
             aria-required="true"
             className={cn(
-              "w-full border border-white/10 bg-white/[0.02] px-3.5 py-3 text-sm text-white outline-none transition-colors duration-300 placeholder:text-white/20 focus:border-accent/60 focus:ring-1 focus:ring-accent/30",
+              "w-full border border-ink/10 bg-ink/[0.02] px-3.5 py-3 text-sm text-ink outline-none transition-colors duration-300 placeholder:text-ink/20 focus:border-accent/60 focus:ring-1 focus:ring-accent/30",
               errors.subject && "border-accent/60",
             )}
           />
           {errors.subject ? (
-            <p id="subject-error" role="alert" className="mt-1.5 text-[10px] text-[#ff8181]">
+            <p id="subject-error" role="alert" className="mt-1.5 text-[10px] text-danger">
               {errors.subject.message}
             </p>
           ) : null}
@@ -244,11 +244,11 @@ export function ContactForm() {
           <div className="mb-2 flex items-center justify-between gap-4">
             <label
               htmlFor="message"
-              className="block font-mono text-[8px] uppercase tracking-[0.2em] text-white/50"
+              className="block font-mono text-[8px] uppercase tracking-[0.2em] text-ink/50"
             >
               Message <span className="text-accent">*</span>
             </label>
-            <span className="font-mono text-[8px] tabular-nums text-white/25">
+            <span className="font-mono text-[8px] tabular-nums text-ink/25">
               {message.length} / 3000
             </span>
           </div>
@@ -261,12 +261,12 @@ export function ContactForm() {
             aria-describedby={errors.message ? "message-error" : undefined}
             aria-required="true"
             className={cn(
-              "w-full resize-y border border-white/10 bg-white/[0.02] px-3.5 py-3 text-sm leading-6 text-white outline-none transition-colors duration-300 placeholder:text-white/20 focus:border-accent/60 focus:ring-1 focus:ring-accent/30",
+              "w-full resize-y border border-ink/10 bg-ink/[0.02] px-3.5 py-3 text-sm leading-6 text-ink outline-none transition-colors duration-300 placeholder:text-ink/20 focus:border-accent/60 focus:ring-1 focus:ring-accent/30",
               errors.message && "border-accent/60",
             )}
           />
           {errors.message ? (
-            <p id="message-error" role="alert" className="mt-1.5 text-[10px] text-[#ff8181]">
+            <p id="message-error" role="alert" className="mt-1.5 text-[10px] text-danger">
               {errors.message.message}
             </p>
           ) : null}
@@ -276,12 +276,12 @@ export function ContactForm() {
           {status === "error" && feedback ? (
             <div
               role="alert"
-              className="mt-5 border border-[#ff6b6b]/25 bg-[#ff3030]/[0.06] px-4 py-3 text-[11px] leading-5 text-[#ffb3b3]"
+              className="mt-5 border border-danger/25 bg-danger/5 px-4 py-3 text-[11px] leading-5 text-danger-strong"
             >
               {feedback}{" "}
               <a
                 href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("Portfolio enquiry")}`}
-                className="underline decoration-[#ffb3b3]/40 underline-offset-2 transition-colors hover:text-white"
+                className="underline decoration-danger-strong/40 underline-offset-2 transition-colors hover:text-ink"
               >
                 Email me directly
               </a>
@@ -290,7 +290,7 @@ export function ContactForm() {
           ) : null}
         </div>
 
-        <div className="mt-6 flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-6 flex flex-col gap-4 border-t border-ink/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="flex items-start gap-2 text-[9px] leading-4 text-subtle">
             <LockKeyhole className="mt-0.5 size-3 shrink-0" strokeWidth={1.5} aria-hidden="true" />
             Your details are only used to reply. No lists, no sharing.

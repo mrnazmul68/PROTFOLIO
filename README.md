@@ -10,6 +10,7 @@ A personal portfolio for Nazmul Islam Mazumdar, a Computer Science & Engineering
 - **GSAP** and **Motion** for motion design
 - **React Hook Form** and **Zod** for the contact form
 - **Resend** for email delivery
+- **Vercel Web Analytics** for privacy-friendly traffic insights
 - **next-mdx-remote** and **gray-matter** for local articles
 - **Lucide** and **Simple Icons** for iconography
 
@@ -117,6 +118,8 @@ To enable email delivery:
 ## Design notes
 
 - All sections use semantic landmarks, a skip link, visible focus styles and reduced-motion fallbacks.
+- A sun/moon toggle in the navigation switches between the dark and light themes. The choice is saved in `localStorage` and restored before paint; the site defaults to dark on a first visit.
+- Light and dark palettes are driven by CSS custom properties in `src/app/globals.css`. The portrait and project artwork intentionally remain dark, framed artifacts in both themes.
 - Animations are progressive enhancements; content remains readable without JavaScript motion.
 - Project visuals are original code-generated concept artwork, clearly labelled as **not screenshots**.
 - Missing live or repository links render as non-clickable “Live soon” / “Repo soon” placeholders.
@@ -131,5 +134,15 @@ The project deploys to any host that supports Next.js (Vercel is the simplest fi
 3. Add the environment variables from the table above.
 4. Set `NEXT_PUBLIC_SITE_URL` to the production domain.
 5. Deploy and verify `/`, `/projects`, `/blog`, `/contact`, `/sitemap.xml` and `/robots.txt`.
+
+### Web Analytics
+
+`<Analytics />` from `@vercel/analytics/next` is mounted in the root layout, so page views are collected automatically once the project is running on Vercel. Analytics does not report from local builds.
+
+To finish enabling it:
+
+1. Open the project in the Vercel dashboard.
+2. Go to **Analytics → Web Analytics** and enable it.
+3. Redeploy the latest commit if the project was already live.
 
 After deploying, update the social URLs and Open Graph image if the domain or branding changes.

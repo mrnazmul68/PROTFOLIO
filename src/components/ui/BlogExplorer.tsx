@@ -37,13 +37,13 @@ export function BlogExplorer({ posts, categories }: BlogExplorerProps) {
 
   return (
     <div>
-      <div className="flex flex-col gap-5 border-y border-white/10 py-5 lg:flex-row lg:items-center lg:justify-between">
+      <div className="flex flex-col gap-5 border-y border-ink/10 py-5 lg:flex-row lg:items-center lg:justify-between">
         <div className="relative w-full lg:max-w-xs">
           <label htmlFor="blog-search" className="sr-only">
             Search articles
           </label>
           <Search
-            className="pointer-events-none absolute left-3.5 top-1/2 size-3.5 -translate-y-1/2 text-white/30"
+            className="pointer-events-none absolute left-3.5 top-1/2 size-3.5 -translate-y-1/2 text-ink/30"
             strokeWidth={1.6}
             aria-hidden="true"
           />
@@ -53,14 +53,14 @@ export function BlogExplorer({ posts, categories }: BlogExplorerProps) {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search the journal..."
-            className="h-10 w-full border border-white/10 bg-white/[0.02] pl-10 pr-10 text-[12px] text-white outline-none transition-colors placeholder:text-white/25 focus:border-accent/50 focus:ring-1 focus:ring-accent/25"
+            className="h-10 w-full border border-ink/10 bg-ink/[0.02] pl-10 pr-10 text-[12px] text-ink outline-none transition-colors placeholder:text-ink/25 focus:border-accent/50 focus:ring-1 focus:ring-accent/25"
           />
           {query ? (
             <button
               type="button"
               onClick={() => setQuery("")}
               aria-label="Clear search"
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 transition-colors hover:text-white"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-ink/30 transition-colors hover:text-ink"
             >
               <X className="size-3.5" strokeWidth={1.7} aria-hidden="true" />
             </button>
@@ -85,7 +85,7 @@ export function BlogExplorer({ posts, categories }: BlogExplorerProps) {
                   "rounded-full border px-3 py-1.5 text-[10px] transition-all duration-300",
                   active
                     ? "border-accent/50 bg-accent text-[#080808]"
-                    : "border-white/10 text-muted hover:border-white/20 hover:text-white",
+                    : "border-ink/10 text-muted hover:border-ink/20 hover:text-ink",
                 )}
               >
                 {category}
@@ -97,13 +97,13 @@ export function BlogExplorer({ posts, categories }: BlogExplorerProps) {
 
       <div className="mt-4 flex items-center justify-between">
         <p
-          className="font-mono text-[8px] uppercase tracking-[0.16em] text-white/30"
+          className="font-mono text-[8px] uppercase tracking-[0.16em] text-ink/30"
           aria-live="polite"
         >
           {String(filteredPosts.length).padStart(2, "0")} article
           {filteredPosts.length === 1 ? "" : "s"}
         </p>
-        <p className="font-mono text-[8px] uppercase tracking-[0.16em] text-white/20">
+        <p className="font-mono text-[8px] uppercase tracking-[0.16em] text-ink/20">
           Sample entries clearly labelled
         </p>
       </div>
@@ -140,8 +140,8 @@ export function BlogExplorer({ posts, categories }: BlogExplorerProps) {
           </AnimatePresence>
         </motion.div>
       ) : (
-        <div className="mt-9 flex min-h-64 flex-col items-center justify-center border border-white/10 bg-white/[0.015] px-6 text-center">
-          <p className="font-serif text-3xl italic text-white/50">Nothing here yet.</p>
+        <div className="mt-9 flex min-h-64 flex-col items-center justify-center border border-ink/10 bg-ink/[0.015] px-6 text-center">
+          <p className="font-serif text-3xl italic text-ink/50">Nothing here yet.</p>
           <p className="mt-3 max-w-sm text-[12px] leading-6 text-subtle">
             No articles match that search. Try a broader phrase or clear the
             filter.
@@ -152,7 +152,7 @@ export function BlogExplorer({ posts, categories }: BlogExplorerProps) {
               setQuery("");
               setActiveCategory("All");
             }}
-            className="mt-5 border-b border-white/20 pb-1 text-[10px] uppercase tracking-[0.16em] text-white/60 transition-colors hover:border-accent hover:text-accent"
+            className="mt-5 border-b border-ink/20 pb-1 text-[10px] uppercase tracking-[0.16em] text-ink/60 transition-colors hover:border-accent hover:text-accent"
           >
             Reset filters
           </button>

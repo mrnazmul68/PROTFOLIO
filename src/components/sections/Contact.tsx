@@ -26,7 +26,7 @@ export function Contact({ headingLevel = "h2" }: ContactProps) {
   return (
     <section
       id="contact"
-      className="anchor-offset section-pad relative overflow-hidden border-t border-white/10 bg-[#090909]"
+      className="anchor-offset section-pad relative overflow-hidden border-t border-ink/10 bg-surface"
     >
       <div
         aria-hidden="true"
@@ -68,39 +68,39 @@ export function Contact({ headingLevel = "h2" }: ContactProps) {
                 <li>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="group flex items-center justify-between gap-5 border-y border-white/10 py-4 transition-colors hover:border-accent/30"
+                    className="group flex items-center justify-between gap-5 border-y border-ink/10 py-4 transition-colors hover:border-accent/30"
                   >
                     <span className="flex items-center gap-3">
-                      <Mail className="size-4 text-white/30 transition-colors group-hover:text-accent" strokeWidth={1.5} aria-hidden="true" />
+                      <Mail className="size-4 text-ink/30 transition-colors group-hover:text-accent" strokeWidth={1.5} aria-hidden="true" />
                       <span>
                         <span className="block font-mono text-[7px] uppercase tracking-[0.18em] text-subtle">
                           Email
                         </span>
-                        <span className="mt-1 block text-[13px] break-all text-white/80 transition-colors group-hover:text-white">
+                        <span className="mt-1 block text-[13px] break-all text-ink/80 transition-colors group-hover:text-ink">
                           {siteConfig.email}
                         </span>
                       </span>
                     </span>
-                    <ArrowUpRight className="size-4 shrink-0 text-white/25 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" aria-hidden="true" />
+                    <ArrowUpRight className="size-4 shrink-0 text-ink/25 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" aria-hidden="true" />
                   </a>
                 </li>
                 <li>
                   <a
                     href={siteConfig.phoneHref}
-                    className="group flex items-center justify-between gap-5 border-b border-white/10 py-4 transition-colors hover:border-accent/30"
+                    className="group flex items-center justify-between gap-5 border-b border-ink/10 py-4 transition-colors hover:border-accent/30"
                   >
                     <span className="flex items-center gap-3">
-                      <Phone className="size-4 text-white/30 transition-colors group-hover:text-accent" strokeWidth={1.5} aria-hidden="true" />
+                      <Phone className="size-4 text-ink/30 transition-colors group-hover:text-accent" strokeWidth={1.5} aria-hidden="true" />
                       <span>
                         <span className="block font-mono text-[7px] uppercase tracking-[0.18em] text-subtle">
                           Phone
                         </span>
-                        <span className="mt-1 block text-[13px] text-white/80 transition-colors group-hover:text-white">
+                        <span className="mt-1 block text-[13px] text-ink/80 transition-colors group-hover:text-ink">
                           {siteConfig.phone}
                         </span>
                       </span>
                     </span>
-                    <ArrowUpRight className="size-4 shrink-0 text-white/25 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" aria-hidden="true" />
+                    <ArrowUpRight className="size-4 shrink-0 text-ink/25 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" aria-hidden="true" />
                   </a>
                 </li>
                 {whatsappHref ? (
@@ -109,30 +109,30 @@ export function Contact({ headingLevel = "h2" }: ContactProps) {
                       href={whatsappHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center justify-between gap-5 border-b border-white/10 py-4 transition-colors hover:border-accent/30"
+                      className="group flex items-center justify-between gap-5 border-b border-ink/10 py-4 transition-colors hover:border-accent/30"
                     >
                       <span className="flex items-center gap-3">
-                        <MessageCircle className="size-4 text-white/30 transition-colors group-hover:text-[#25D366]" strokeWidth={1.5} aria-hidden="true" />
+                        <MessageCircle className="size-4 text-ink/30 transition-colors group-hover:text-[#25D366]" strokeWidth={1.5} aria-hidden="true" />
                         <span>
                           <span className="block font-mono text-[7px] uppercase tracking-[0.18em] text-subtle">
                             WhatsApp
                           </span>
-                          <span className="mt-1 block text-[13px] text-white/80 transition-colors group-hover:text-white">
+                          <span className="mt-1 block text-[13px] text-ink/80 transition-colors group-hover:text-ink">
                             Start a chat
                           </span>
                         </span>
                       </span>
-                      <ArrowUpRight className="size-4 shrink-0 text-white/25 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#25D366]" aria-hidden="true" />
+                      <ArrowUpRight className="size-4 shrink-0 text-ink/25 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#25D366]" aria-hidden="true" />
                     </a>
                   </li>
                 ) : null}
-                <li className="flex items-center gap-3 border-b border-white/10 py-4">
-                  <MapPin className="size-4 text-white/30" strokeWidth={1.5} aria-hidden="true" />
+                <li className="flex items-center gap-3 border-b border-ink/10 py-4">
+                  <MapPin className="size-4 text-ink/30" strokeWidth={1.5} aria-hidden="true" />
                   <span>
                     <span className="block font-mono text-[7px] uppercase tracking-[0.18em] text-subtle">
                       Based in
                     </span>
-                    <span className="mt-1 block text-[13px] text-white/80">
+                    <span className="mt-1 block text-[13px] text-ink/80">
                       {siteConfig.location}
                     </span>
                   </span>
@@ -142,7 +142,7 @@ export function Contact({ headingLevel = "h2" }: ContactProps) {
 
             <Reveal delay={0.16} className="mt-8">
               <div className="flex flex-wrap items-center justify-between gap-5">
-                <div className="flex items-center gap-2.5 font-mono text-[8px] uppercase tracking-[0.16em] text-white/45">
+                <div className="flex items-center gap-2.5 font-mono text-[8px] uppercase tracking-[0.16em] text-ink/45">
                   <span className="size-1.5 animate-blink rounded-full bg-accent" aria-hidden="true" />
                   {siteConfig.availability}
                 </div>
@@ -152,7 +152,7 @@ export function Contact({ headingLevel = "h2" }: ContactProps) {
 
             <Reveal delay={0.2} className="mt-10 hidden lg:block">
               <div className="relative border-l border-accent/50 pl-5">
-                <p className="font-serif text-lg italic leading-6 text-white/40">
+                <p className="font-serif text-lg italic leading-6 text-ink/40">
                   &ldquo;Good work starts with a clear conversation.&rdquo;
                 </p>
               </div>
@@ -164,12 +164,12 @@ export function Contact({ headingLevel = "h2" }: ContactProps) {
               <ContactForm />
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="mt-4 flex items-center justify-end gap-2 text-[9px] text-white/25">
-                <span className="size-1 rounded-full bg-white/20" aria-hidden="true" />
+              <p className="mt-4 flex items-center justify-end gap-2 text-[9px] text-ink/25">
+                <span className="size-1 rounded-full bg-ink/20" aria-hidden="true" />
                 Prefer direct email?{" "}
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-white/45 underline decoration-white/15 underline-offset-2 transition-colors hover:text-accent"
+                  className="text-ink/45 underline decoration-ink/15 underline-offset-2 transition-colors hover:text-accent"
                 >
                   Write to me
                 </a>
@@ -179,13 +179,13 @@ export function Contact({ headingLevel = "h2" }: ContactProps) {
         </div>
 
         <Reveal delay={0.1} className="mt-16">
-          <div className="flex flex-col gap-4 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
-            <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/25">
+          <div className="flex flex-col gap-4 border-t border-ink/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-ink/25">
               Based in {siteConfig.location} · Working with people everywhere
             </p>
             <ScrambleText
               text="Available for the right conversation."
-              className="font-serif text-sm italic text-white/35"
+              className="font-serif text-sm italic text-ink/35"
             />
           </div>
         </Reveal>

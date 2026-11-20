@@ -37,7 +37,7 @@ export function About() {
                   variant="about"
                   className="aspect-[4/5] w-full"
                 />
-                <div className="absolute -bottom-5 -right-3 z-30 hidden items-center gap-3 border border-white/12 bg-[#111111] px-4 py-3 shadow-2xl sm:flex">
+                <div className="absolute -bottom-5 -right-3 z-30 hidden items-center gap-3 border border-ink/12 bg-elevated px-4 py-3 shadow-2xl sm:flex">
                   <span className="flex size-9 items-center justify-center rounded-full border border-accent/30 bg-accent/10 text-accent">
                     <GraduationCap className="size-4" strokeWidth={1.5} aria-hidden="true" />
                   </span>
@@ -45,7 +45,7 @@ export function About() {
                     <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-subtle">
                       Currently
                     </p>
-                    <p className="mt-0.5 text-xs text-white/85">
+                    <p className="mt-0.5 text-xs text-ink/85">
                       {siteConfig.semester} · CSE
                     </p>
                   </div>
@@ -54,21 +54,21 @@ export function About() {
             </Reveal>
 
             <Reveal delay={0.12} className="mt-10 grid grid-cols-2 gap-3">
-              <div className="border border-white/10 bg-white/[0.02] p-4">
+              <div className="border border-ink/10 bg-ink/[0.02] p-4">
                 <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-subtle">
                   Focus
                 </p>
-                <p className="mt-2 text-xs leading-5 text-white/80">
+                <p className="mt-2 text-xs leading-5 text-ink/80">
                   Full Stack
                   <br />
                   Web Development
                 </p>
               </div>
-              <div className="border border-white/10 bg-white/[0.02] p-4">
+              <div className="border border-ink/10 bg-ink/[0.02] p-4">
                 <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-subtle">
                   Method
                 </p>
-                <p className="mt-2 text-xs leading-5 text-white/80">
+                <p className="mt-2 text-xs leading-5 text-ink/80">
                   Learn by
                   <br />
                   building &amp; refining
@@ -79,7 +79,7 @@ export function About() {
 
           <div className="lg:col-span-6 lg:col-start-7">
             <Reveal>
-              <p className="text-balance font-serif text-[clamp(1.75rem,2.7vw,2.5rem)] italic leading-[1.15] tracking-[-0.02em] text-white/90">
+              <p className="text-balance font-serif text-[clamp(1.75rem,2.7vw,2.5rem)] italic leading-[1.15] tracking-[-0.02em] text-ink/90">
                 &ldquo;I like the moment a vague idea becomes a system you can
                 actually use.&rdquo;
               </p>
@@ -102,12 +102,12 @@ export function About() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="mt-10 grid gap-8 border-t border-white/10 pt-8 sm:grid-cols-2">
+              <div className="mt-10 grid gap-8 border-t border-ink/10 pt-8 sm:grid-cols-2">
                 <div>
                   <p className="font-mono text-[8px] uppercase tracking-[0.22em] text-accent/80">
                     Education
                   </p>
-                  <p className="mt-3 text-sm font-medium leading-6 text-white/90">
+                  <p className="mt-3 text-sm font-medium leading-6 text-ink/90">
                     {siteConfig.university}
                   </p>
                   <p className="mt-1 text-xs leading-5 text-muted">
@@ -121,7 +121,7 @@ export function About() {
                   <p className="font-mono text-[8px] uppercase tracking-[0.22em] text-accent/80">
                     Philosophy
                   </p>
-                  <p className="mt-3 text-sm leading-6 text-white/75">
+                  <p className="mt-3 text-sm leading-6 text-ink/75">
                     Understand the problem first. Keep the structure honest.
                     Refine through iteration — in code and in design.
                   </p>
@@ -138,7 +138,7 @@ export function About() {
                   {siteConfig.interests.map((interest) => (
                     <li
                       key={interest}
-                      className="inline-flex items-center gap-2 border border-white/10 bg-white/[0.02] px-3 py-1.5 text-[10px] text-white/65"
+                      className="inline-flex items-center gap-2 border border-ink/10 bg-ink/[0.02] px-3 py-1.5 text-[10px] text-ink/65"
                     >
                       <span className="size-1 rounded-full bg-accent/80" aria-hidden="true" />
                       {interest}
@@ -157,7 +157,7 @@ export function About() {
                   {siteConfig.currentFocus.slice(0, 3).map((focus) => (
                     <li
                       key={focus}
-                      className="flex items-start gap-2 text-[12px] leading-5 text-white/65"
+                      className="flex items-start gap-2 text-[12px] leading-5 text-ink/65"
                     >
                       <span className="mt-[0.45rem] h-px w-3 shrink-0 bg-accent/50" aria-hidden="true" />
                       {focus}
@@ -170,7 +170,7 @@ export function About() {
             <Reveal delay={0.16}>
               <Link
                 href="/about"
-                className="group mt-9 inline-flex items-center gap-2 border-b border-white/15 pb-1.5 text-[11px] uppercase tracking-[0.16em] text-white/70 transition-colors hover:border-accent hover:text-accent"
+                className="group mt-9 inline-flex items-center gap-2 border-b border-ink/15 pb-1.5 text-[11px] uppercase tracking-[0.16em] text-ink/70 transition-colors hover:border-accent hover:text-accent"
               >
                 More on education &amp; direction
                 <ArrowUpRight

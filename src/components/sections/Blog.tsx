@@ -10,7 +10,7 @@ export function Blog() {
   const posts = getAllPosts().slice(0, 3);
 
   return (
-    <section id="blog" className="anchor-offset section-pad relative border-t border-white/10">
+    <section id="blog" className="anchor-offset section-pad relative border-t border-ink/10">
       <div className="wrap">
         <SectionHeading
           eyebrow="06 — Journal"
@@ -41,15 +41,15 @@ export function Blog() {
         </div>
 
         <Reveal delay={0.08} className="mt-12">
-          <div className="flex flex-col gap-3 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-3 border-t border-ink/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-[11px] leading-5 text-subtle">
               Early entries are clearly marked{" "}
-              <span className="text-white/60">sample articles</span> while the
+              <span className="text-ink/60">sample articles</span> while the
               journal is being written.
             </p>
             <Link
               href="/blog"
-              className="font-mono text-[8px] uppercase tracking-[0.18em] text-white/40 transition-colors hover:text-accent"
+              className="font-mono text-[8px] uppercase tracking-[0.18em] text-ink/40 transition-colors hover:text-accent"
             >
               Browse the journal →
             </Link>

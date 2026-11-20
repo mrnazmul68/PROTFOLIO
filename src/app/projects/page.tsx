@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-white/10 pb-14 pt-32 sm:pb-16 sm:pt-40">
+      <section className="relative overflow-hidden border-b border-ink/10 pb-14 pt-32 sm:pb-16 sm:pt-40">
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-grid opacity-[0.18] [mask-image:linear-gradient(to_bottom,black,transparent_94%)]"
@@ -52,19 +52,19 @@ export default function ProjectsPage() {
               </p>
               <div className="mt-5 flex gap-8 font-mono text-[8px] uppercase tracking-[0.16em]">
                 <div>
-                  <span className="block text-[1.35rem] font-medium tracking-[-0.04em] text-white">
+                  <span className="block text-[1.35rem] font-medium tracking-[-0.04em] text-ink">
                     {String(projects.length).padStart(2, "0")}
                   </span>
                   <span className="mt-1 block text-subtle">Projects</span>
                 </div>
                 <div>
-                  <span className="block text-[1.35rem] font-medium tracking-[-0.04em] text-white">
+                  <span className="block text-[1.35rem] font-medium tracking-[-0.04em] text-ink">
                     {String(liveCount).padStart(2, "0")}
                   </span>
                   <span className="mt-1 block text-subtle">Live</span>
                 </div>
                 <div>
-                  <span className="block text-[1.35rem] font-medium tracking-[-0.04em] text-white">
+                  <span className="block text-[1.35rem] font-medium tracking-[-0.04em] text-ink">
                     {String(categoryCount).padStart(2, "0")}
                   </span>
                   <span className="mt-1 block text-subtle">Categories</span>
@@ -80,9 +80,9 @@ export default function ProjectsPage() {
           <ProjectsGrid projects={projects} />
 
           <Reveal delay={0.06} className="mt-14">
-            <div className="grid gap-6 border-y border-white/10 py-6 sm:grid-cols-[1fr_auto] sm:items-center">
+            <div className="grid gap-6 border-y border-ink/10 py-6 sm:grid-cols-[1fr_auto] sm:items-center">
               <p className="max-w-xl text-[11px] leading-6 text-subtle">
-                <span className="text-white/50">A note on previews:</span> the
+                <span className="text-ink/50">A note on previews:</span> the
                 visuals are custom concept artwork, not screenshots. Live and
                 repository links appear only where they exist — missing links are
                 intentional placeholders, not broken buttons.
@@ -95,13 +95,13 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      <section className="border-t border-white/10 bg-[#090909]">
+      <section className="border-t border-ink/10 bg-surface">
         <div className="wrap flex flex-col gap-6 py-12 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="font-mono text-[8px] uppercase tracking-[0.2em] text-subtle">
               More context
             </p>
-            <p className="mt-2 text-sm text-white/70">
+            <p className="mt-2 text-sm text-ink/70">
               Read how the journey led to these builds.
             </p>
           </div>

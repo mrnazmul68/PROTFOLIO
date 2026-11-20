@@ -17,7 +17,7 @@ export function Portrait({
   return (
     <div
       className={cn(
-        "relative isolate overflow-hidden border border-white/10 bg-[#0b0b0b]",
+        "theme-dark relative isolate overflow-hidden border border-ink/10 bg-[#0b0b0b]",
         className,
       )}
     >
@@ -58,14 +58,14 @@ export function Portrait({
         className="absolute inset-0 z-20 border-[10px] border-transparent mix-blend-overlay"
       />
 
-      <div className="absolute left-4 top-4 z-30 flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.22em] text-white/55 sm:left-5 sm:top-5">
+      <div className="absolute left-4 top-4 z-30 flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.22em] text-ink/55 sm:left-5 sm:top-5">
         <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
         Portrait / 001
       </div>
 
       <div
         aria-hidden="true"
-        className="absolute right-5 top-5 z-30 hidden font-mono text-[9px] uppercase tracking-[0.22em] text-white/35 sm:block"
+        className="absolute right-5 top-5 z-30 hidden font-mono text-[9px] uppercase tracking-[0.22em] text-ink/35 sm:block"
         style={{ writingMode: "vertical-rl" }}
       >
         Nazmul Islam — MMXXVI
@@ -74,14 +74,14 @@ export function Portrait({
       <div className="absolute inset-x-4 bottom-4 z-30 sm:inset-x-5 sm:bottom-5">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <p className="font-mono text-[9px] uppercase tracking-[0.24em] text-white/45">
+            <p className="font-mono text-[9px] uppercase tracking-[0.24em] text-ink/45">
               {siteConfig.location}
             </p>
-            <p className="mt-1 font-serif text-2xl italic leading-none text-white/90 sm:text-3xl">
+            <p className="mt-1 font-serif text-2xl italic leading-none text-ink/90 sm:text-3xl">
               {siteConfig.displayName}
             </p>
           </div>
-          <span className="mb-0.5 border border-white/15 bg-black/30 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.18em] text-white/55 backdrop-blur-sm">
+          <span className="mb-0.5 border border-ink/15 bg-black/30 px-2.5 py-1 font-mono text-[8px] uppercase tracking-[0.18em] text-ink/55 backdrop-blur-sm">
             Est. 2026
           </span>
         </div>
