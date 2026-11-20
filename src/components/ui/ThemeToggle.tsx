@@ -74,7 +74,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       title={`Switch to ${nextTheme} theme`}
       data-theme-toggle
       className={cn(
-        "group relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-ink/10 text-muted transition-colors duration-300 hover:border-accent/45 hover:text-accent",
+        "cursor-pointer group relative flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-full border border-ink/10 text-muted transition-colors duration-300 hover:border-accent/45 hover:text-accent",
         className,
       )}
     >
