@@ -20,7 +20,7 @@ const variants: Record<ButtonVariant, string> = {
   primary:
     "btn-shine bg-accent text-[#080808] shadow-[0_12px_42px_-16px_rgba(255,48,48,0.65)] hover:bg-accent-hover hover:shadow-[0_18px_50px_-14px_rgba(255,48,48,0.55)]",
   outline:
-    "border border-ink/15 bg-ink/[0.02] text-ink hover:border-accent/50 hover:bg-ink/[0.05]",
+    "border border-ink/20 bg-ink/10 text-ink shadow-[0_10px_30px_-24px_rgba(0,0,0,0.65)] hover:border-accent/50 hover:bg-ink/15",
   ghost: "text-muted hover:text-ink",
 };
 
