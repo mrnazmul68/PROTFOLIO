@@ -284,7 +284,7 @@ export default function AboutPage() {
                   <Button href="/contact" size="lg">
                     Start a conversation
                   </Button>
-                  <Button href="/#journey" variant="outline" size="lg">
+                  <Button href="/#journey" variant="route" size="lg">
                     Read the journey
                   </Button>
                 </div>

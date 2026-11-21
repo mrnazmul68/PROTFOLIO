@@ -87,7 +87,7 @@ export default function ProjectsPage() {
                 repository links appear only where they exist — missing links are
                 intentional placeholders, not broken buttons.
               </p>
-              <Button href="/contact" variant="outline" size="md">
+              <Button href="/contact" variant="route" size="md">
                 Build one together
               </Button>
             </div>

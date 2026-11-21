@@ -40,7 +40,7 @@ export default function ErrorPage({
           </button>
           <Link
             href="/"
-            className={buttonStyles({ variant: "outline", size: "lg", className: "" })}
+            className={buttonStyles({ variant: "route", size: "lg", className: "" })}
           >
             Back home
           </Link>

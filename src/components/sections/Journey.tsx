@@ -82,7 +82,7 @@ export function Journey() {
           }
           description="A sequence of interests and deliberate practice, not a list of invented job titles. The chapters are still being written."
           action={
-            <Button href="/projects" variant="outline" size="sm">
+            <Button href="/projects" variant="route" size="sm">
               See the work
             </Button>
           }

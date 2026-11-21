@@ -309,7 +309,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     </div>
                   </div>
                   <div className="mt-6 border-t border-ink/10 pt-5">
-                    <Button href="/contact" variant="outline" size="sm" className="w-full">
+                    <Button href="/contact" variant="route" size="sm" className="w-full">
                       Discuss a project
                     </Button>
                   </div>

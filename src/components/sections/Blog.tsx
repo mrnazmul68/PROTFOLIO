@@ -26,7 +26,7 @@ export function Blog() {
           }
           description="Notes on the web, computer science and the process of learning. Writing is how I make sure I actually understand the thing."
           action={
-            <Button href="/blog" variant="outline" size="sm">
+            <Button href="/blog" variant="route" size="sm">
               All articles
             </Button>
           }

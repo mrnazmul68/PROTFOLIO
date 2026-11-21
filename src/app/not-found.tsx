@@ -30,7 +30,7 @@ export default function NotFound() {
           </Link>
           <Link
             href="/projects"
-            className={buttonStyles({ variant: "outline", size: "lg" })}
+            className={buttonStyles({ variant: "route", size: "lg" })}
           >
             Explore projects
             <ArrowUpRight className="size-4" strokeWidth={1.8} aria-hidden="true" />

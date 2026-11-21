@@ -137,7 +137,10 @@ function TasksArt() {
             </div>
             <div className="grid grid-cols-3 gap-2">
               {["To do", "In progress", "Done"].map((column, index) => (
-                <div key={column} className="border border-ink/[0.07] bg-ink/[0.015] p-2">
+                <div
+                  key={column}
+                  className="border border-ink/[0.07] bg-ink/[0.015] p-2"
+                >
                   <div className="mb-2 flex items-center gap-1.5">
                     <span
                       className={cn(
@@ -227,7 +230,10 @@ function ShortenerArt() {
                     {long}
                   </span>
                 </div>
-                <span className="h-1 w-8 bg-ink/12" style={{ opacity: 1 - index * 0.22 }} />
+                <span
+                  className="h-1 w-8 bg-ink/12"
+                  style={{ opacity: 1 - index * 0.22 }}
+                />
               </div>
             ))}
           </div>
@@ -318,7 +324,9 @@ function MarketArt() {
                 <span className="size-2.5 bg-ink/10" />
                 <span className="font-mono text-[5px] text-ink/35">{item}</span>
               </div>
-              <span className="font-mono text-[5px] text-ink/50">${(index + 2) * 1.5}</span>
+              <span className="font-mono text-[5px] text-ink/50">
+                ${(index + 2) * 1.5}
+              </span>
             </div>
           ))}
         </div>

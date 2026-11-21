@@ -31,7 +31,7 @@ export function Projects() {
           }
           description="Some things I've built with curiosity, creativity, and code. Each project is a study in turning an idea into a working system."
           action={
-            <Button href="/projects" variant="outline" size="sm">
+            <Button href="/projects" variant="route" size="sm">
               View the archive
             </Button>
           }

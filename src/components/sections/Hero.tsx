@@ -261,7 +261,7 @@ export function Hero() {
                   data-hero-copy
                   href="/contact"
                   className={buttonStyles({
-                    variant: "outline",
+                    variant: "route",
                     size: "lg",
                     className: "w-full sm:w-auto",
                   })}

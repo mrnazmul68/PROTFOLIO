@@ -45,7 +45,7 @@ export function Services() {
           }
           description="The areas I'm building depth in through coursework, projects and deliberate practice — from interface to API."
           action={
-            <Button href="/contact" variant="outline" size="sm">
+            <Button href="/contact" variant="route" size="sm">
               Start a conversation
             </Button>
           }

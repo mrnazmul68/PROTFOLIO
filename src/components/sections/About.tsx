@@ -23,7 +23,7 @@ export function About() {
           }
           description="A Computer Science student with a builder's habits: curious about the system, careful about the interface, always learning in public."
           action={
-            <Button href="/about" variant="outline" size="sm">
+            <Button href="/about" variant="route" size="sm">
               Read the full story
             </Button>
           }
